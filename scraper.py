@@ -1,3 +1,4 @@
+from math import prod
 from selenium import webdriver
 import time
 from selenium.webdriver.common.by import By
@@ -49,11 +50,26 @@ class GorillaMindScraper:
         
         def extract_text(self, link):
             self.driver.get(link)
+            dict_products = {'Name': [], 'Price': [], 'Description': [], 'Flavours': [], 'Rating': []}
+
             name = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[1]/section/div/div/div[2]/div[1]/h1').text
+            dict_products['Name'].append(name)
+
             price = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[1]/section/div/div/div[2]/div[1]/p').text
-            description = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[2]/div/div/div[1]/div/div[2]').text
+            dict_products['Price'].append(price)
+
+            description = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[2]/div/div/div[1]/div/div[1]/div[1]/span[1]').text
+            dict_products['Description'].append(description)
+
             flavours = self.driver.find_element(by=By.XPATH, value='//*[@id="product_form_4898112667693"]/div[2]/div[1]').text
-            score_out_of_5 = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-68eb7e26-87f6-4711-8408-2327df293f70"]/section/div/div/div/div/span/div[1]/div/div[1]/span').text
+            flavour_list = list(flavours.splitlines())
+            flavour_list.remove('Flavor')
+            dict_products['Flavours'].append(flavour_list)
+
+            rating = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-68eb7e26-87f6-4711-8408-2327df293f70"]/section/div/div/div/div/span/div[1]/div/div[1]/span').text
+            dict_products['Rating'].append(rating)
+
+            return dict_products
 
         def extract_image(self, link):
             self.driver.get(link)
@@ -65,5 +81,5 @@ class GorillaMindScraper:
 
 
 gorilla_mind = GorillaMindScraper()
-gorilla_mind.extract_image("https://gorillamind.com/collections/all/products/gorilla-mode")
+prod_info = gorilla_mind.extract_text("https://gorillamind.com/collections/all/products/gorilla-mode")
 
