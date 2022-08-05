@@ -57,9 +57,13 @@ class GorillaMindScraper:
 
         def extract_image(self, link):
             self.driver.get(link)
-            
+            image_HTML = self.driver.find_element(by=By.XPATH, value='//*[@id="21549905936429"]')
+            src = image_HTML.get_attribute('src')
+            print(src)
+
+
 
 
 gorilla_mind = GorillaMindScraper()
-gorilla_mind.extract_text("https://gorillamind.com/collections/all/products/gorilla-mode")
+gorilla_mind.extract_image("https://gorillamind.com/collections/all/products/gorilla-mode")
 
