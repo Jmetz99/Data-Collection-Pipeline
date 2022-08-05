@@ -1,9 +1,9 @@
 from selenium import webdriver
 import time
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common import service
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class GorillaMindScraper:
@@ -12,11 +12,6 @@ class GorillaMindScraper:
             self.url = 'https://gorillamind.com/collections/all?page=1'
             chrome_options = Options()
             self.driver = webdriver.Chrome(options=chrome_options)
-            self.open_page()
-            self.get_links()
-            self.scroll_to_next_page_button()
-            self.close_offer()
-            self.go_to_next_page()
             
         def open_page(self):
             self.driver.get(self.url)
@@ -44,13 +39,27 @@ class GorillaMindScraper:
             self.driver.execute_script("arguments[0].scrollIntoView();", next_page)
 
         def close_offer(self):
-            time.sleep(4)
-            close_button = self.driver.find_element(by=By.XPATH, value='//*[@id="SMSBump-Modal"]/div/div/button')
+            delay = 10
+            close_button = WebDriverWait(self.driver, delay).until(EC.presence_of_element_located((By.XPATH, '//*[@id="SMSBump-Modal"]/div/div/button')))
             close_button.click()
 
         def go_to_next_page(self):
             next_page = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-collection__main"]/div/div[2]/div/div/nav/a')
             next_page.click()
+        
+        def extract_text(self, link):
+            self.driver.get(link)
+            name = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[1]/section/div/div/div[2]/div[1]/h1').text
+            print(name)
+            price = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[1]/section/div/div/div[2]/div[1]/p').text
+            print(price)
+            description = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[2]/div/div/div[1]/div/div[2]').text
+            print(description)
+            flavours = self.driver.find_element(by=By.XPATH, value='//*[@id="product-form-4898112667693"]').text
+            print(flavours)
+            score_out_of_5 = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-68eb7e26-87f6-4711-8408-2327df293f70"]/section/div/div/div/div/span/div[1]/div/div[1]/div/span[2]/span').
+            print(score_out_of_5)
 
 gorilla_mind = GorillaMindScraper()
+gorilla_mind.extract_text("https://gorillamind.com/collections/all/products/gorilla-mode")
 
