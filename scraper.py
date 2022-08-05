@@ -50,15 +50,15 @@ class GorillaMindScraper:
         def extract_text(self, link):
             self.driver.get(link)
             name = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[1]/section/div/div/div[2]/div[1]/h1').text
-            print(name)
             price = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[1]/section/div/div/div[2]/div[1]/p').text
-            print(price)
             description = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[2]/div/div/div[1]/div/div[2]').text
-            print(description)
-            flavours = self.driver.find_element(by=By.XPATH, value='//*[@id="product-form-4898112667693"]').text
-            print(flavours)
-            score_out_of_5 = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-68eb7e26-87f6-4711-8408-2327df293f70"]/section/div/div/div/div/span/div[1]/div/div[1]/div/span[2]/span').
-            print(score_out_of_5)
+            flavours = self.driver.find_element(by=By.XPATH, value='//*[@id="product_form_4898112667693"]/div[2]/div[1]').text
+            score_out_of_5 = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-68eb7e26-87f6-4711-8408-2327df293f70"]/section/div/div/div/div/span/div[1]/div/div[1]/span').text
+
+        def extract_image(self, link):
+            self.driver.get(link)
+            
+
 
 gorilla_mind = GorillaMindScraper()
 gorilla_mind.extract_text("https://gorillamind.com/collections/all/products/gorilla-mode")
