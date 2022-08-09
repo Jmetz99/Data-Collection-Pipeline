@@ -1,4 +1,6 @@
-from ast import Try
+import os
+import json
+import urllib.request
 from selenium import webdriver
 import time
 import uuid
@@ -14,7 +16,7 @@ class GorillaMindScraper:
             self.url = url
             chrome_options = Options()
             self.driver = webdriver.Chrome(options=chrome_options)
-            self.product_dict = {'Name': [], 'ID': [], 'UUID': [], 'Price': [], 'Description': [], 'Flavours': [], 'Rating': [], 'Image Link': []}
+            self.product_dict = {'Name': [], 'ID': '', 'UUID': [], 'Price': [], 'Description': [], 'Flavours': [], 'Rating': [], 'Image Link': ""}
 
             
         def open_page(self, url):
@@ -83,31 +85,48 @@ class GorillaMindScraper:
                     self.product_dict['Rating'].append(rating)
                 except:
                     pass
+              
 
         def product_id(self, link):
-            str(link)
-            id = link.replace('https://gorillamind.com/collections/all-products/products/', '')
-            self.product_dict['ID'].append(id)
+            id = link.replace('https://gorillamind.com/collections/all/products/', '')
+            self.product_dict['ID'] = id
             
 
-        def extract_image(self, link):
+        def extract_image_link(self, link):
             self.driver.get(link)
             image_HTML = self.driver.find_element(by=By.XPATH, value='/html/body/div[6]/section/div/div[2]/section[1]/section/div/div/div[1]/div/div[1]/div/div/div[1]/div/img')
             src = image_HTML.get_attribute('src')
-            self.product_dict['Image Link'].append(src)
+            image_link = str(src)
+            self.product_dict['Image Link'] = image_link
         
         def gen_unique_id(self):
-            self.product_dict['UUID'].append(uuid.uuid4())
+            UUID = uuid.uuid4()
+            self.product_dict['UUID'].append(str(UUID))
         
         def make_prod_dict(self, link):
             self.extract_text(link)
-            self.extract_image(link)
+            self.extract_image_link(link)
             self.product_id(link)
             self.gen_unique_id()
-            print(self.product_dict)
-            
+            return self.product_dict
+        
+        def save_data(self):
+            directory = self.product_dict["ID"]
+            parent_directory = "/Users/jacobmetz/Documents/web_scraper/raw_data/"
+            path = os.path.join(parent_directory, directory)
+            os.mkdir(path)
+            with open('%s/data.json' %path, 'w', encoding='utf-8') as f:
+                json.dump(self.product_dict, f, ensure_ascii=False, indent=4)
+        
+        def download_image(self):
+            image_link = self.product_dict["Image Link"]
+            id = self.product_dict["ID"]
+            parent_directory = "/Users/jacobmetz/Documents/web_scraper/raw_data/"
+            path = os.path.join(parent_directory, id)
+            urllib.request.urlretrieve(image_link, "%s/id.jpeg" %path)
 
 
 gorilla_mind = GorillaMindScraper('https://gorillamind.com/collections/all?page=1')
-gorilla_mind.make_prod_dict('https://gorillamind.com/collections/all/products/gorilla-mode')
-
+product_dictionary = gorilla_mind.make_prod_dict('https://gorillamind.com/collections/all/products/gorilla-mode-nitric')
+gorilla_mind.save_data()
+gorilla_mind.download_image()
