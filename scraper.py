@@ -16,10 +16,6 @@ class GorillaMindScraper:
 
     Attributes:
     url (str): The url link to the website to be scraped.
-
-    Methods:
-
-    
     '''
     product_dict = {'Name': [], 'ID': '', 'UUID': [], 'Price': [], 'Description': [], 'Flavours': [], 'Rating': [], 'Image Link': ""}
     
