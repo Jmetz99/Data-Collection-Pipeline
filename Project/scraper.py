@@ -83,15 +83,18 @@ class GorillaMindScraper:
         next_page = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-collection__main"]/div/div[2]/div/div/nav/a')
         next_page.click()
     
-    def get_product_data(self):
+    def get_product_data(self, link):
         '''
         This function is used to create a dictionary containing all product data.
-            
+
+        Parameters:
+        link (str): The link to the product page.
+
         Returns:
             dict: The dictionary containing all product data.
         '''
         product_dict = {'Name': [], 'ID': '', 'UUID': [], 'Price': [], 'Description': [], 'Flavours': [], 'Rating': [], 'Image Link': ""}
-        self.driver.get(self.url)
+        self.driver.get(link)
         product_dict['ID'] = self.product_id(link)
         product_dict['UUID'] = uuid.uuid4()
         product_dict['Image Link'] = self.extract_image_link(link)
@@ -148,7 +151,7 @@ class GorillaMindScraper:
         image_link = str(src)
         return image_link
     
-    def save_data(self):
+    def save_data(self, data):
         '''
         This function is used to save a product dictionary.
 
