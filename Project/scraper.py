@@ -17,19 +17,18 @@ class GorillaMindScraper:
     Attributes:
     url (str): The url link to the website to be scraped.
     '''
-    
-    if __name__ == "__main__":
-        def __init__(self, url):
-            '''
-            Constructs the necessary attributes for the scraper object and sets the webdriver to Selenium.
-            
-            Parameters:
-            url (str): The url link to the website to be scraped.
-            '''
-            self.url = url
-            chrome_options = Options()
-            self.driver = webdriver.Chrome(options=chrome_options)
-            product_dict = {'Name': [], 'ID': '', 'UUID': [], 'Price': [], 'Description': [], 'Flavours': [], 'Rating': [], 'Image Link': ""}
+
+
+    def __init__(self, url):
+        '''
+        Constructs the necessary attributes for the scraper object and sets the webdriver to Selenium.
+        
+        Parameters:
+        url (str): The url link to the website to be scraped.
+        '''
+        self.url = url
+        chrome_options = Options()
+        self.driver = webdriver.Chrome(options=chrome_options)
        
     def __open_page(self):
         '''
@@ -84,18 +83,15 @@ class GorillaMindScraper:
         next_page = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-collection__main"]/div/div[2]/div/div/nav/a')
         next_page.click()
     
-    def get_product_data(self, link):
+    def get_product_data(self):
         '''
         This function is used to create a dictionary containing all product data.
-        
-        Parameters:
-            link(str): The link to the product page.
             
         Returns:
             dict: The dictionary containing all product data.
         '''
         product_dict = {'Name': [], 'ID': '', 'UUID': [], 'Price': [], 'Description': [], 'Flavours': [], 'Rating': [], 'Image Link': ""}
-        self.driver.get(link)
+        self.driver.get(self.url)
         product_dict['ID'] = self.product_id(link)
         product_dict['UUID'] = uuid.uuid4()
         product_dict['Image Link'] = self.extract_image_link(link)
@@ -180,8 +176,7 @@ class GorillaMindScraper:
         path = os.path.join(parent_directory, id)
         urllib.request.urlretrieve(image_link, "%s/id.jpeg" %path)
 
-
-gorilla_mind = GorillaMindScraper('https://gorillamind.com/collections/all?page=1')
-product_dictionary = gorilla_mind.get_product_data('https://gorillamind.com/collections/all/products/gorilla-mode-nitric')
-gorilla_mind.save_data()
-gorilla_mind.download_image()
+if __name__ == '__main__':
+    scraper = GorillaMindScraper('https://gorillamind.com/collections/all?page=1')
+    links = scraper.get_links()
+    print(links)
