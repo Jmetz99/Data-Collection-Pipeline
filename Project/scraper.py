@@ -17,7 +17,6 @@ class GorillaMindScraper:
     Attributes:
     url (str): The url link to the website to be scraped.
     '''
-    product_dict = {'Name': [], 'ID': '', 'UUID': [], 'Price': [], 'Description': [], 'Flavours': [], 'Rating': [], 'Image Link': ""}
     
     if __name__ == "__main__":
         def __init__(self, url):
@@ -32,7 +31,7 @@ class GorillaMindScraper:
             self.driver = webdriver.Chrome(options=chrome_options)
             product_dict = {'Name': [], 'ID': '', 'UUID': [], 'Price': [], 'Description': [], 'Flavours': [], 'Rating': [], 'Image Link': ""}
        
-    def open_page(self):
+    def __open_page(self):
         '''
         This function is used to open the webpage given.
         '''
@@ -85,49 +84,49 @@ class GorillaMindScraper:
         next_page = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-collection__main"]/div/div[2]/div/div/nav/a')
         next_page.click()
     
-    def extract_text(self, link):
+    def get_product_data(self, link):
         '''
-        This function is used to extract all text information from a page.
+        This function is used to create a dictionary containing all product data.
         
         Parameters:
             link(str): The link to the product page.
             
         Returns:
-            dict: The dictionary containing text information.
+            dict: The dictionary containing all product data.
         '''
+        product_dict = {'Name': [], 'ID': '', 'UUID': [], 'Price': [], 'Description': [], 'Flavours': [], 'Rating': [], 'Image Link': ""}
         self.driver.get(link)
+        product_dict['ID'] = self.product_id(link)
+        product_dict['UUID'] = uuid.uuid4()
+        product_dict['Image Link'] = self.extract_image_link(link)
         try:
-            name = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[1]/section/div/div/div[2]/div[1]/h1').text
-            self.product_dict['Name'].append(name)
+            product_dict['Name'] = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[1]/section/div/div/div[2]/div[1]/h1').text
         except:
-            pass
+            print('Data not found.')
         
         try:
-            price = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[1]/section/div/div/div[2]/div[1]/p').text
-            self.product_dict['Price'].append(price)
+            product_dict['Price'] = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[1]/section/div/div/div[2]/div[1]/p').text   
         except:
-            pass
+            print('Data not found.')
 
         try:
-            description = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[2]/div/div/div[1]/div/div[1]/div[1]/span[1]').text
-            self.product_dict['Description'].append(description)
+            product_dict['Description'] = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[2]/div/div/div[1]/div/div[1]/div[1]/span[1]').text
         except:
-            pass
+            print('Data not found.')
 
         try:
             flavours = self.driver.find_element(by=By.XPATH, value='/html/body/div[6]/section/div/div[2]/section[1]/section/div/div/div[2]/div[5]/div[2]/form/div[2]/div[1]').text
             flavour_list = list(flavours.splitlines())
-            flavour_list.remove('Flavor')
-            self.product_dict['Flavours'].append(flavour_list)
+            product_dict['Flavours'] = flavour_list.remove('Flavor')
         except:
-            pass
+            print('Data not found.')
         
         try:
-            rating = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-68eb7e26-87f6-4711-8408-2327df293f70"]/section/div/div/div/div/span/div[1]/div/div[1]/span').text
-            self.product_dict['Rating'].append(rating)
+            product_dict['Rating'] = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-68eb7e26-87f6-4711-8408-2327df293f70"]/section/div/div/div/div/span/div[1]/div/div[1]/span').text
         except:
-            pass
-            
+            print('Data not found.')
+        
+        return product_dict
 
     def product_id(self, link):
         '''
@@ -137,7 +136,7 @@ class GorillaMindScraper:
             link(str): The link to the product page.
         '''
         id = link.replace('https://gorillamind.com/collections/all/products/', '')
-        self.product_dict['ID'] = id
+        return id
         
 
     def extract_image_link(self, link):
@@ -151,30 +150,7 @@ class GorillaMindScraper:
         image_HTML = self.driver.find_element(by=By.XPATH, value='/html/body/div[6]/section/div/div[2]/section[1]/section/div/div/div[1]/div/div[1]/div/div/div[1]/div/img')
         src = image_HTML.get_attribute('src')
         image_link = str(src)
-        self.product_dict['Image Link'] = image_link
-    
-    def gen_unique_id(self):
-        '''
-        This function is used to generate a unique ID and append it to a product's dictionary.
-        '''
-        UUID = uuid.uuid4()
-        self.product_dict['UUID'].append(str(UUID))
-    
-    def make_prod_dict(self, link):
-        '''
-        This function is used to contstruct a complete product dictionary.
-        
-        Parameters:
-            link(str): The link to the product page.
-        
-        Returns:
-            dict: The complete dictionary for the product.
-        '''
-        self.extract_text(link)
-        self.extract_image_link(link)
-        self.product_id(link)
-        self.gen_unique_id()
-        return self.product_dict
+        return image_link
     
     def save_data(self):
         '''
@@ -183,27 +159,29 @@ class GorillaMindScraper:
         This function creates a new directory named after the product's ID and then saves 
         the product's dictionary as a .json file within this directory.
         '''
-        directory = self.product_dict["ID"]
+        directory = data["ID"]
         parent_directory = "/Users/jacobmetz/Documents/web_scraper/raw_data/"
         path = os.path.join(parent_directory, directory)
         os.mkdir(path)
-        with open('%s/data.json' %path, 'w', encoding='utf-8') as f:
-            json.dump(self.product_dict, f, ensure_ascii=False, indent=4)
+        with open('{name}/data.json'.format(name = data["ID"]), 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=4)
     
-    def download_image(self):
+    def download_image(self, link):
         '''
         This function is used to save a product image
         
         This function retrives a product's image through the link in its dictionary and saves
-        the image within that product's directory'''
-        image_link = self.product_dict["Image Link"]
-        id = self.product_dict["ID"]
+        the image within that product's directory.
+        '''
+        data = self.get_product_data(self, link)
+        image_link = data["Image Link"]
+        id = data["ID"]
         parent_directory = "/Users/jacobmetz/Documents/web_scraper/raw_data/"
         path = os.path.join(parent_directory, id)
         urllib.request.urlretrieve(image_link, "%s/id.jpeg" %path)
 
 
 gorilla_mind = GorillaMindScraper('https://gorillamind.com/collections/all?page=1')
-product_dictionary = gorilla_mind.make_prod_dict('https://gorillamind.com/collections/all/products/gorilla-mode-nitric')
+product_dictionary = gorilla_mind.get_product_data('https://gorillamind.com/collections/all/products/gorilla-mode-nitric')
 gorilla_mind.save_data()
 gorilla_mind.download_image()
