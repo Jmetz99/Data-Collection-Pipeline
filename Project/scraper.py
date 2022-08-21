@@ -29,7 +29,7 @@ class GorillaMindScraper:
         self.url = url
         chrome_options = Options()
         self.driver = webdriver.Chrome(options=chrome_options)
-       
+    
     def __open_page(self):
         '''
         This function is used to open the webpage given.
@@ -101,12 +101,12 @@ class GorillaMindScraper:
         '''
         product_dict = {'Name': '', 'ID': '', 'UUID': '', 'Price': 0, 'Description': '', 'Flavours': [], 'Rating': 0, 'Image Link': ""}
         self.driver.get(link)
-        product_dict['ID'] = self.__product_id(link)
-        UUID = str(uuid.uuid4())
-        UUID_1 = UUID.strip("UUID('")
-        UUID_2 = UUID_1.strip(")'")
-        product_dict['UUID'] = UUID_2
-        product_dict['Image Link'] = self.__extract_image_link(link)
+        product_dict['ID'] = self._product_id(link)
+        # UUID = str(uuid.uuid4())
+        # UUID_1 = UUID.strip("UUID('")
+        # UUID_2 = UUID_1.strip(")'")
+        # product_dict['UUID'] = UUID_2
+        product_dict['Image Link'] = self._extract_image_link(link)
         try:
             product_dict['Name'] = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[1]/section/div/div/div[2]/div[1]/h1').text
         except:
@@ -141,18 +141,18 @@ class GorillaMindScraper:
         
         return product_dict
 
-    def __product_id(self, link):
+    def _product_id(self, link):
         '''
         This function is used to generate a product ID from its web address.
         
         Parameters:
             link(str): The link to the product page.
         '''
-        id = link.replace('https://gorillamind.com/products/', '')
+        id = link.replace('https://gorillamind.com/collections/all/products/', '')
         return id
         
 
-    def __extract_image_link(self, link):
+    def _extract_image_link(self, link):
         '''
         This function is used to extract the link to a product's image from its web page.
         
@@ -173,7 +173,7 @@ class GorillaMindScraper:
             link(str): The link to the product page.
         '''
 
-        id = self.__product_id(link)
+        id = self._product_id(link)
         cwd = os.getcwd()
         path = f'{cwd}/raw_data/{id}' 
         if os.path.exists(path):
@@ -197,9 +197,8 @@ class GorillaMindScraper:
         This function retrives a product's image through the link in its dictionary and saves
         the image within the specified directory.
         '''
-
         image_link = self.__extract_image_link(link)
-        id = self.__product_id(link)
+        id = self._product_id(link)
         os.chdir(directory)
         urllib.request.urlretrieve(image_link, f"{id}.jpeg")
 

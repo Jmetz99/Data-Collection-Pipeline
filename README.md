@@ -5,3 +5,6 @@ Milestone 1, 2 & 3
 
 Milestone 4
 * Stored data collected from scraper in dictionary. Wrote code which saves this dictionary in a folder for each product along with the product image.
+
+Milestone 5
+* Wrote unittests for the methods of the scraper concerned with gathering the links to product pages, gathering the data from these pages and correctly storing it.
