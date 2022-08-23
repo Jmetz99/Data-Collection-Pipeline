@@ -25,7 +25,7 @@ class ScraperTestCase(unittest.TestCase):
         self.assertIsInstance(product_dict['Rating'], float)
         self.assertIsInstance(product_dict['Image Link'], str)
 
-    def mk_test_database(self):
+    def mk_test_datafolder(self):
         id = self.test_scraper._product_id(self.link_list[1])
         path = f'{os.getcwd()}/raw_data_test/{id}'
         if os.path.exists(path):
@@ -34,12 +34,12 @@ class ScraperTestCase(unittest.TestCase):
             os.makedirs(path)
         return path
     
-    def delete_test_database(self):
-            path = self.mk_test_database()
+    def delete_test_datafolder(self):
+            path = self.mk_test_datafolder()
             os.rmdir(path)
 
     def test_save_data(self):
-        path = self.mk_test_database()
+        path = self.mk_test_datafolder()
         data = self.test_scraper.get_product_data(self.link_list[1])
         self.test_scraper.save_data(data, path)
         id = self.test_scraper._product_id(self.link_list[1])
@@ -48,7 +48,7 @@ class ScraperTestCase(unittest.TestCase):
         with open(f"{path}/data.json", "r") as f2:
             file2 = json.loads(f2.read())
         self.assertEqual(file1, file2)
-        self.delete_test_database()
+        self.delete_test_datafolder()
 
 if __name__ == '__main__':
     unittest.main()

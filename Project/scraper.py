@@ -151,6 +151,8 @@ class GorillaMindScraper:
             link(str): The link to the product page.
         '''
         id = link.replace('https://gorillamind.com/collections/all/products/', '')
+        if id[0:5] == 'https':
+            id = link.replace('https://gorillamind.com/products/', '')    
         return id
         
 
@@ -184,13 +186,12 @@ class GorillaMindScraper:
         This function is used to create a local folder for a given product in a specificed location.
         
         Parameters:
-            path(str): The link to the product page.
+            path(str): The path to the local folder.
         '''
         if os.path.exists(path):
             pass
         else:
             os.makedirs(path)
-        return path
 
     def save_data(self, data, directory):
         '''
@@ -200,31 +201,35 @@ class GorillaMindScraper:
         with open('data.json'.format(name = data["ID"]), 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
     
-    def download_image(self, link, directory):
+    def download_image(self, link, path):
         '''
         This function is used to save a product image in a specified directory.
         
         This function retrives a product's image through the link in its dictionary and saves
         the image within the specified directory.
         '''
-        image_link = self.__extract_image_link(link)
+        image_link = self._extract_image_link(link)
         id = self._product_id(link)
-        os.chdir(directory)
+        os.chdir(path)
         urllib.request.urlretrieve(image_link, f"{id}.jpeg")
     
-    def upload_to_cloud(self, link ):
+    def upload_to_cloud(self, path):
         '''
         This function is used to upload a given product's json file to an amazon S3 bucket.
         Parameters:
             link(str): The link to the product page.
         '''
-        path = 
-        response = self.s3_client.upload_file(path, bucket, object_name)
+        s3_client = boto3.client('s3')
+        id = path.replace('/Users/jacobmetz/Documents/web_scraper/project/raw_data/', '')
+        response = s3_client.upload_file(f'{path}/data.json', 'aicore-scraper-data', f'{id}.json')
+        reponse = s3_client.upload_file(f'{path}/{id}.jpeg', 'aicore-scraper-data', f'{id}.jpeg')
 
 if __name__ == '__main__':
     scraper = GorillaMindScraper('https://gorillamind.com/collections/all?page=1')
     data = scraper.get_product_data('https://gorillamind.com/products/gorilla-mode-nitric')
-    directory = scraper.make_directory('https://gorillamind.com/products/gorilla-mode-nitric')
-    scraper.save_data(data, directory)
-    scraper.download_image('https://gorillamind.com/products/gorilla-mode-nitric', directory)
+    path = scraper.get_path_to_data('https://gorillamind.com/products/gorilla-mode-nitric')
+    directory = scraper.make_directory(path)
+    scraper.save_data(data, path)
+    scraper.download_image('https://gorillamind.com/products/gorilla-mode-nitric', path)
+    scraper.upload_to_cloud(path)
     scraper._close_page()
