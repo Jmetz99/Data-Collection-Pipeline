@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import boto3
 
 
 class GorillaMindScraper:
@@ -29,6 +30,7 @@ class GorillaMindScraper:
         self.url = url
         chrome_options = Options()
         self.driver = webdriver.Chrome(options=chrome_options)
+        self.s3_client = boto3.client('s3')
     
     def __open_page(self):
         '''
@@ -164,18 +166,26 @@ class GorillaMindScraper:
         src = image_HTML.get_attribute('src')
         image_link = str(src)
         return image_link
-    
-    def make_directory(self, link):
+
+    def get_path_to_data(self, link):
         '''
-        This function is used to create a local folder for a given product from its product page link.
+        This function is used to create the path to the local folder for a given product from its product page link.
         
         Parameters:
             link(str): The link to the product page.
         '''
-
         id = self._product_id(link)
         cwd = os.getcwd()
         path = f'{cwd}/raw_data/{id}' 
+        return path
+    
+    def make_directory(self, path):
+        '''
+        This function is used to create a local folder for a given product in a specificed location.
+        
+        Parameters:
+            path(str): The link to the product page.
+        '''
         if os.path.exists(path):
             pass
         else:
@@ -201,6 +211,15 @@ class GorillaMindScraper:
         id = self._product_id(link)
         os.chdir(directory)
         urllib.request.urlretrieve(image_link, f"{id}.jpeg")
+    
+    def upload_to_cloud(self, link ):
+        '''
+        This function is used to upload a given product's json file to an amazon S3 bucket.
+        Parameters:
+            link(str): The link to the product page.
+        '''
+        path = 
+        response = self.s3_client.upload_file(path, bucket, object_name)
 
 if __name__ == '__main__':
     scraper = GorillaMindScraper('https://gorillamind.com/collections/all?page=1')
