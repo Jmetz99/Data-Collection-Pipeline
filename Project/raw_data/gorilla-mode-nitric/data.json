@@ -1,23 +1,10 @@
 {
     "Name": "GORILLA MODE NITRIC",
     "ID": "gorilla-mode-nitric",
-    "UUID": "",
+    "UUID": "4a65e6b6-bb71-4db0-85a9-f920e99870e7",
     "Price": "$59.99",
     "Description": "With Gorilla Mode Nitric you can expect a massive increase in nitric oxide (NO) levels, vasodilation, intracellular hydration and as significant of a boost in muscle strength and endurance as you can get from a legal non-hormonal pre-workout. This product is maxed out from all angles. The traditional Arginine–eNOS–nitric oxide (NO) pathway is completely saturated with an unheard of dose of L-Citrulline, as well as topped out dosages of Nitrosigine and Agmatine Sulfate for good measure. Over a gram of nitrates also ensures that the nitrate–nitrite–nitric oxide (NO) pathway is taken care of. Intracellular hyper-hydration is best-in-class too with a huge dose of Creatine Monohydrate, Glycerpump and Betaine Anhydrous to volumize the muscle and support performance and pumps. Inhibiting the enzyme angiotensin converting enzyme (ACE) with a clinical dose of VasoDrive-AP® also checks off another pathway to push the boundaries on supraphysiological levels of vasodilation. Finally, a high dose of Malic Acid was included for good measure to act as a Krebs cycle intermediary and support greater levels of muscular endurance.",
-    "Flavours": [
-        "CHERRY BLACKOUT",
-        "VOLCANO BURST",
-        "FIREFLY LEMONADE",
-        "LEMON LIME",
-        "MOUTH WATERING WATERMELON",
-        "JUNGLE JUICE",
-        "MOJO MOJITO",
-        "FRUIT PUNCH",
-        "BOMBSICLE",
-        "TIGER'S BLOOD",
-        "MANGO PEACH",
-        "NITRIC VARIETY PACK"
-    ],
+    "Number of Flavours": 12,
     "Rating": 4.7,
     "Image Link": "https://cdn.shopify.com/s/files/1/0369/2580/0493/products/Gorilla-Mode-Nitric-Front-Render-CB_1200x.png?v=1660581225"
 }

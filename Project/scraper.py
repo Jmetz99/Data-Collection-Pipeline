@@ -9,7 +9,8 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import boto3
-
+import pandas as pd
+from sqlalchemy import create_engine
 
 class GorillaMindScraper:
     '''
@@ -101,14 +102,14 @@ class GorillaMindScraper:
         Returns:
             dict: The dictionary containing all product data.
         '''
-        product_dict = {'Name': '', 'ID': '', 'UUID': '', 'Price': 0, 'Description': '', 'Flavours': [], 'Rating': 0, 'Image Link': ""}
+        product_dict = {'Name': '', 'ID': '', 'UUID': '', 'Price': 0, 'Description': '', 'Number of Flavours': [], 'Rating': 0, 'Image Link': ""}
         self.driver.get(link)
         product_dict['ID'] = self._product_id(link)
-        # UUID = str(uuid.uuid4())
-        # UUID_1 = UUID.strip("UUID('")
-        # UUID_2 = UUID_1.strip(")'")
-        # product_dict['UUID'] = UUID_2
-        product_dict['Image Link'] = self._extract_image_link(link)
+        UUID = str(uuid.uuid4())
+        UUID_1 = UUID.strip("UUID('")
+        UUID_2 = UUID_1.strip(")'")
+        product_dict['UUID'] = UUID_2
+        product_dict['Image Link'] = self._extract_image_link()
         try:
             product_dict['Name'] = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[1]/section/div/div/div[2]/div[1]/h1').text
         except:
@@ -117,29 +118,29 @@ class GorillaMindScraper:
         try:
             product_dict['Price'] = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[1]/section/div/div/div[2]/div[1]/p/span[2]/span/span').text
         except:
-            print('Price not found.')
+            print(f'{product_dict["ID"]} price not found.')
 
         try:
             descrip_txt = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[2]/div/div/div[1]/div/div[1]/div[1]/span[1]').text
             description = descrip_txt.replace('\n', " ")
             product_dict['Description'] = description
         except:
-            print('Description not found.')
+            print(f'{product_dict["ID"]} description not found.')
 
         try:
-            flavours = self.driver.find_element(by=By.XPATH, value='//*[@id="product_form_4891279261741"]/div[2]/div[1]').text
+            flavours = self.driver.find_element(by=By.XPATH, value='/html/body/div[6]/section/div/div[2]/section[1]/section/div/div/div[2]/div[5]/div[2]/form/div[2]/div[1]').text
             flavour_list = flavours.splitlines()
             flavour_list.remove('Flavor')
-            product_dict['Flavours'] = flavour_list
+            product_dict['Number of Flavours'] = len(flavour_list)
         except:
-            print('Flavours not found.')
+            print(f'{product_dict["ID"]} flavours not found.')
         
         try:
             rating = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-68eb7e26-87f6-4711-8408-2327df293f70"]/section/div/div/div/div/span/div[1]/div/div[1]/span').text
             rating = float(rating)
             product_dict['Rating'] = rating
         except:
-            print('Rating not found.')
+            print(f'{product_dict["ID"]} rating not found.')
         
         return product_dict
 
@@ -156,14 +157,13 @@ class GorillaMindScraper:
         return id
         
 
-    def _extract_image_link(self, link):
+    def _extract_image_link(self):
         '''
         This function is used to extract the link to a product's image from its web page.
         
         Parameters:
             link(str): The link to the product page.
         '''
-        self.driver.get(link)
         image_HTML = self.driver.find_element(by=By.XPATH, value='/html/body/div[6]/section/div/div[2]/section[1]/section/div/div/div[1]/div/div[1]/div/div/div[1]/div/img')
         src = image_HTML.get_attribute('src')
         image_link = str(src)
@@ -201,15 +201,13 @@ class GorillaMindScraper:
         with open('data.json'.format(name = data["ID"]), 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
     
-    def download_image(self, link, path):
+    def download_image(self, image_link, id, path):
         '''
         This function is used to save a product image in a specified directory.
         
-        This function retrives a product's image through the link in its dictionary and saves
+        This function retrives a product's image through the link given and saves
         the image within the specified directory.
         '''
-        image_link = self._extract_image_link(link)
-        id = self._product_id(link)
         os.chdir(path)
         urllib.request.urlretrieve(image_link, f"{id}.jpeg")
     
@@ -223,13 +221,38 @@ class GorillaMindScraper:
         id = path.replace('/Users/jacobmetz/Documents/web_scraper/project/raw_data/', '')
         response = s3_client.upload_file(f'{path}/data.json', 'aicore-scraper-data', f'{id}.json')
         reponse = s3_client.upload_file(f'{path}/{id}.jpeg', 'aicore-scraper-data', f'{id}.jpeg')
+    
+    def get_all_data(self):
+        links = self.get_links()
+        data_dicts = []
+
+        for link in links:
+            data = scraper.get_product_data(link)
+            data_dicts.append(data)
+            path = scraper.get_path_to_data(link)
+            directory = scraper.make_directory(path)
+            scraper.save_data(data, path)
+            scraper.download_image(data['Image Link'], data['ID'], path)
+            scraper._close_page()
+        return data_dicts
+    
+
+
 
 if __name__ == '__main__':
     scraper = GorillaMindScraper('https://gorillamind.com/collections/all?page=1')
-    data = scraper.get_product_data('https://gorillamind.com/products/gorilla-mode-nitric')
-    path = scraper.get_path_to_data('https://gorillamind.com/products/gorilla-mode-nitric')
-    directory = scraper.make_directory(path)
-    scraper.save_data(data, path)
-    scraper.download_image('https://gorillamind.com/products/gorilla-mode-nitric', path)
-    scraper.upload_to_cloud(path)
-    scraper._close_page()
+    all_data = scraper.get_all_data()
+    df = pd.DataFrame(all_data)
+    print(df)
+
+    # DATABASE_TYPE = 'postgresql'
+    # DBAPI = 'psycopg2'
+    # HOST = 'aicore-scraper-data.cjzhidft7nnj.eu-west-2.rds.amazonaws.com'
+    # USER = 'postgres'
+
+    # DATABASE = 'GorillaMindProductData'
+    # PORT = 5432
+    # engine = create_engine(f"{DATABASE_TYPE}+{DBAPI}://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}")
+    # engine.connect()
+
+    # df.to_sql('aicore-scraper-data', engine, if_exists='replace')
