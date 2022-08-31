@@ -31,7 +31,6 @@ class GorillaMindScraper:
         self.url = url
         chrome_options = Options()
         self.driver = webdriver.Chrome(options=chrome_options)
-        self.s3_client = boto3.client('s3')
     
     def __open_page(self):
         '''
@@ -245,14 +244,19 @@ if __name__ == '__main__':
     df = pd.DataFrame(all_data)
     print(df)
 
-    # DATABASE_TYPE = 'postgresql'
-    # DBAPI = 'psycopg2'
-    # HOST = 'aicore-scraper-data.cjzhidft7nnj.eu-west-2.rds.amazonaws.com'
-    # USER = 'postgres'
-
-    # DATABASE = 'GorillaMindProductData'
-    # PORT = 5432
-    # engine = create_engine(f"{DATABASE_TYPE}+{DBAPI}://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}")
-    # engine.connect()
-
-    # df.to_sql('aicore-scraper-data', engine, if_exists='replace')
+    DATABASE_TYPE = 'postgresql'
+    DBAPI = 'psycopg2'
+    HOST = 'aicore-scraper-data.cjzhidft7nnj.eu-west-2.rds.amazonaws.com'
+    USER = 'postgres'
+    os.chdir('/Users/jacobmetz/Desktop')
+    with open('password.txt', 'rb') as fp:
+        PASSWORD = fp.read()
+    DATABASE = 'GorillaMindProductData'
+    PORT = 5432
+    engine = create_engine(f"{DATABASE_TYPE}+{DBAPI}://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}")
+    engine.connect()
+    os.chdir('/Users/jacobmetz/Desktop')
+    with open('password.txt', 'rb') as fp:
+        PASSWORD = fp.read()
+        print(v)
+    df.to_sql('aicore-scraper-data', engine, if_exists='replace')
