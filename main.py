@@ -1,27 +1,35 @@
-from utils.gorilla_mind_scraper import GorillaMindScraper
+from operator import concat
+from utils.scraper import Scraper
 from sqlalchemy import create_engine
-
+import pandas as pd
+import os
+import psycopg2
+import numpy as np
+DATABASE_TYPE = 'postgresql'
+DBAPI = 'psycopg2'
+HOST = 'gorilla.cjzhidft7nnj.eu-west-2.rds.amazonaws.com'
+USER = 'postgres'
+PASSWORD = os.environ.get('Password')
+DATABASE = 'postgres'
+PORT = 5432
+engine = create_engine(f"{DATABASE_TYPE}+{DBAPI}://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}")
+engine.connect()
 
 if __name__ == '__main__':
-    scraper = GorillaMindScraper()
-    #gorilla_mind_df = pd.DataFrame(all_data)
-    # gorilla_mind_df = pd.read_csv('gorilla_mind_df.csv')
+    scraper = Scraper()
+    new_data = scraper.get_data()
     
-    DATABASE_TYPE = 'postgresql'
-    DBAPI = 'psycopg2'
-    HOST = 'database-1.cjzhidft7nnj.eu-west-2.rds.amazonaws.com'
-    USER = 'postgres'
-    PASSWORD = os.environ.get('Password')
-    DATABASE = 'database-1'
-    PORT = 5432
-    engine = create_engine(f"{DATABASE_TYPE}+{DBAPI}://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}")
-    engine.connect()
+    # gorilla_mind_df = scraper.get_all_data()
+    # print(gorilla_mind_df)
+    # gorilla_mind_df = pd.read_csv('/Users/jacobmetz/Documents/web_scraper/utils/gorilla_mind_df.csv')
     
-    with psycopg2.connect(host=HOST, user=USER, password=PASSWORD, dbname=DATABASE, port=5432) as conn:
-        with conn.cursor() as cur:
-            cur.execute("""SELECT table_name FROM information_schema.tables
-        WHERE table_schema = 'public'""")
-            for table in cur.fetchall():
-                print(table)
+    # new_ids = pd.DataFrame(gorilla_mind_df["ID"])
+    # old_ids = pd.read_sql_query('''SELECT "ID" FROM "GorillaMindProductData"''', engine)
+   
+    # difference_locations = np.where(new_ids != old_ids)
+    # indicies = difference_locations[0].tolist()
+    # different_ids = new_ids.values[difference_locations]
 
-    gorilla_mind_df.to_sql('GorillaMindProductData', engine, if_exists='replace')
+    # new_items = gorilla_mind_df.iloc[indicies]
+    # new_items = new_items.reset_index(drop=True)
+    
