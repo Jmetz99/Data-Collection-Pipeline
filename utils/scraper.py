@@ -128,7 +128,7 @@ class Scraper:
         except: 
             pass
         try:
-            descrip_txt = self.driver.find_element(by=By.XPATH, value='/html/body/div[6]/section/div/div[2]/section[1]/section/div/div/div[2]/div[2]/ul').text
+            descrip_txt = self.driver.find_element(by=By.XPATH, value='/html/body/div[6]/section/div/div[2]/section[2]/div/div/div[1]/div/div[2]').text
             description = descrip_txt.replace('\n', " ")
             product_dict['Description'] = description
         except:
@@ -271,7 +271,7 @@ class Scraper:
         
         return links_to_scrape
 
-    def get_data(self):
+    def scrape_all_data(self):
         '''
         This function is used scrape all new product data from the gorilla mind website and return a dataframe of the scraped data.
         '''

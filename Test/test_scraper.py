@@ -1,16 +1,18 @@
+import sys
 import unittest
-from context import project
 import json
 import os
+sys.path.insert(1, '/Users/jacobmetz/Documents/web_scraper/utils')
+from scraper import Scraper
 
 class ScraperTestCase(unittest.TestCase):
-    def setUp(self):
-        self.test_scraper = project.GorillaMindScraper('https://gorillamind.com/collections/all?page=1')
+    def __init__(self, methodName: str = ...) -> None:
+        super().__init__(methodName)
+        self.test_scraper = Scraper()
         self.link_list = self.test_scraper.get_links()
-
+    
     def test_get_links(self):
-        link_list = self.test_scraper.get_links()
-        self.assertEqual(len(link_list), 48)
+        self.assertEqual(len(self.link_list), 48)
 
     def test_get_product_data(self):
         product_dict = self.test_scraper.get_product_data(self.link_list[1])

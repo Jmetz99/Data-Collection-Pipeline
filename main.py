@@ -17,19 +17,5 @@ engine.connect()
 
 if __name__ == '__main__':
     scraper = Scraper()
-    new_data = scraper.get_data()
-    
-    # gorilla_mind_df = scraper.get_all_data()
-    # print(gorilla_mind_df)
-    # gorilla_mind_df = pd.read_csv('/Users/jacobmetz/Documents/web_scraper/utils/gorilla_mind_df.csv')
-    
-    # new_ids = pd.DataFrame(gorilla_mind_df["ID"])
-    # old_ids = pd.read_sql_query('''SELECT "ID" FROM "GorillaMindProductData"''', engine)
-   
-    # difference_locations = np.where(new_ids != old_ids)
-    # indicies = difference_locations[0].tolist()
-    # different_ids = new_ids.values[difference_locations]
-
-    # new_items = gorilla_mind_df.iloc[indicies]
-    # new_items = new_items.reset_index(drop=True)
-    
+    new_data = scraper.scrape_all_data()
+    new_data.to_sql('GorillaMindProductData', engine, if_exists='append')
