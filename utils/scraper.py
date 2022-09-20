@@ -14,6 +14,15 @@ import pandas as pd
 from sqlalchemy import create_engine
 import psycopg2
 
+DATABASE_TYPE = 'postgresql'
+DBAPI = 'psycopg2'
+HOST = 'gorilla.cjzhidft7nnj.eu-west-2.rds.amazonaws.com'
+USER = 'postgres'
+PASSWORD = os.environ.get('Password')
+DATABASE = 'postgres'
+PORT = 5432
+engine = create_engine(f"{DATABASE_TYPE}+{DBAPI}://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}")
+engine.connect()
 chromedriver.install()
 
 
@@ -153,7 +162,6 @@ class Scraper:
         if id[0:5] == 'https':
             id = link.replace('https://gorillamind.com/products/', '')    
         return id
-    
 
     def _extract_image_link(self):
         '''
@@ -185,7 +193,7 @@ class Scraper:
             link(str): The link to the product page.
         '''
         id = self._product_id(link)
-        cwd = os.getcwd()
+        cwd = os.path.dirname(os.path.realpath(__file__))
         path = f'{cwd}/raw_data/{id}' 
         return path
     
@@ -233,19 +241,42 @@ class Scraper:
             link(str): The link to the product page.
         '''
         s3_client = boto3.client('s3')
-        id = path.replace('/Users/jacobmetz/Documents/web_scraper/project/raw_data/', '')
-        s3_client.upload_file(f'{path}/data.json', 'aicore-scraper-data', f'{id}.json')
-        s3_client.upload_file(f'{path}/{id}.jpeg', 'aicore-scraper-data', f'{id}.jpeg')
-    
-    #def prevent_rescrape(self, df):
+        id = path.replace('/Users/jacobmetz/Documents/web_scraper/utils/raw_data/', '')
         
-
-    def get_all_data(self):
-        '''
-        This function is used scrape all product data from the gorilla mind website and return a dataframe of scraped data.
-        '''
-
+        s3_client.upload_file(f'{path}/data.json', 'aicore-scraper-data', f'{id}.json')
+        try:
+            s3_client.upload_file(f'{path}/{id}.jpeg', 'aicore-scraper-data', f'{id}.jpeg')
+        except:
+            pass
+    
+    def prevent_rescrape(self):
         links = self.get_links()
+        ids = set()
+        for link in links:
+            uids = []
+            id = self._product_id(link)
+            uids.append(id)
+            ids.update(uids)
+        
+        db_ids = pd.read_sql_query('''SELECT "ID" FROM "GorillaMindProductData"''', engine)
+        old_ids = set(db_ids["ID"])
+        sym_diff = list(ids.symmetric_difference(old_ids))
+        
+        links_to_scrape = []
+        for id in sym_diff:
+            link = f"https://gorillamind.com/collections/all/products/{id}"
+            links_to_scrape.append(link)
+        if len(links_to_scrape) == 0:
+            print('Up to date!')
+        
+        return links_to_scrape
+
+    def get_data(self):
+        '''
+        This function is used scrape all new product data from the gorilla mind website and return a dataframe of the scraped data.
+        '''
+
+        links = self.prevent_rescrape()
         data_dicts = []
 
         for link in links:
@@ -259,5 +290,4 @@ class Scraper:
             self.return_home()
 
         df = pd.DataFrame(data_dicts)
-
         return df
