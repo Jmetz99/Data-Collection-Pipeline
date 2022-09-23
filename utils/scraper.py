@@ -31,7 +31,9 @@ class Scraper:
     This class is used to represent the Gorilla Mind website to be scraped.
 
     Attributes:
-    url (str): The url link to the website to be scraped.
+    ----------
+    url: str
+        The url link to the website to be scraped.
     '''
 
     def __init__(self, url: str = 'https://gorillamind.com/collections/all?page=1'):
@@ -39,7 +41,9 @@ class Scraper:
         Constructs the necessary attributes for the scraper object and sets the webdriver to Selenium.
         
         Parameters:
-        url (str): The url link to the website to be scraped.
+        ----------
+        url: str 
+            The url link to the website to be scraped.
         '''
         chrome_options = Options()
         self.driver = webdriver.Chrome(options=chrome_options)
@@ -52,7 +56,9 @@ class Scraper:
         This function is used to click on an object.
         
         Parameters:
-        xpath (str): The Xpath of the object to be clicked.
+        ----------
+        xpath: str
+            The Xpath of the object to be clicked
         '''
         product = self.driver.find_element(by=By.XPATH, value = xpath)
         product.click()
@@ -62,7 +68,9 @@ class Scraper:
         This function is used to close the discount offer pop-up window.
 
         Parameters:
-        xpath (str): The Xpath of the pop-up window.
+        ----------
+        xpath: str
+            The Xpath of the pop-up window.
         '''
 
         close_offer_button = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located((By.XPATH, xpath)))
@@ -73,10 +81,14 @@ class Scraper:
         This function is used to obtain the links to product pages.
         
         Parameters:
-        xpaths (str): The Xpaths of the product containers.
+        ----------
+        xpath: str
+            The Xpaths of the product containers.
         
         Returns:
-            list: The list of links to product pages.
+        -------
+        link_list: list
+            The list of links to product pages.
         '''
         prod_container1 = self.driver.find_element(by=By.XPATH, value = xpath)
         prod_list1 = prod_container1.find_elements(by=By.XPATH, value = './div')
@@ -102,7 +114,9 @@ class Scraper:
         This function is used to extract the link to a product's image from its web page.
         
         Parameters:
-            link(str): The link to the product page.
+        ----------
+        link: str
+            The link to the product page.
         '''
         try:    
             image_HTML = self.driver.find_element(by=By.XPATH, value=xpath)
@@ -124,22 +138,34 @@ class Scraper:
         This function is used to generate a product ID from its web address.
         
         Parameters:
-            link(str): The link to the product page.
+        ----------
+        link: str
+            The link to the product page.
+
+        Returns:
+        --------
+        id: str 
+            The user friendly id of product.
+
         '''
         id = link.replace('https://gorillamind.com/collections/all/products/', '')
         if id[0:5] == 'https':
             id = link.replace('https://gorillamind.com/products/', '')    
         return id
-        
+
     def get_product_data(self, link):
         '''
         This function is used to create a dictionary containing all product data.
 
         Parameters:
-        link (str): The link to the product page.
+        ----------
+        link: str
+            The link to the product page
 
         Returns:
-            dict: The dictionary containing all product data.
+        --------
+        product_dict: dict 
+            The dictionary containing all of a product's data.
         '''
         product_dict = {'Name': '', 'ID': '', 'UUID': '', 'Price': 0, 'Description': '', 'Number of Flavours': [], 'Rating': 0, 'Image Link': ""}
         self.driver.get(link)
@@ -197,6 +223,11 @@ class Scraper:
         ----------
         link: str
             The link to the product page.
+       
+        Returns:
+        --------
+        path: str
+            The path to the local folder.
         '''
         id = self.product_id(link)
         cwd = os.path.dirname(os.path.realpath(__file__))
@@ -236,8 +267,14 @@ class Scraper:
         '''
         This function is used to save a product image in a specified directory.
         
-        This function retrives a product's image through the link given and saves
-        the image within the specified directory.
+        Parameters:
+        ----------
+        image_link: str
+            The link to the product image.
+        id: str
+            The id of the product.
+        path: str
+            The path to the local folder.
         '''
         os.chdir(path)
         try:
@@ -246,6 +283,9 @@ class Scraper:
             print(f'{id} image not found')
     
     def _return_home(self):
+        '''
+        This function is used to return to the root project folder.
+        '''
         p = os.path.abspath(os.path.dirname(__file__))
         os.chdir(p)
            
@@ -255,7 +295,8 @@ class Scraper:
 
         Parameters:
         ----------
-        link(str): The link to the product page.
+        path: str
+            The path to the local folder.
         '''
         s3_client = boto3.client('s3')
         id = path.replace('/Users/jacobmetz/Documents/web_scraper/utils/raw_data/', '')
@@ -272,7 +313,8 @@ class Scraper:
         
         Returns:
         --------
-        set: The set of unscraped links.
+        links_to_scrape: list
+            The list of unscraped links.
         '''
         links = self.get_links()
         ids = set()
