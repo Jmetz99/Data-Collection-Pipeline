@@ -46,53 +46,91 @@ class Scraper:
         self.driver.get(url)
         self.driver.maximize_window()
     
-    def __close_offer(self, xpath: str = '//*[@id="SMSBump-Modal"]/div/div/button'):
+
+    def click_object(self, xpath: str):
+        '''
+        This function is used to click on an object.
+        
+        Parameters:
+        xpath (str): The Xpath of the object to be clicked.
+        '''
+        product = self.driver.find_element(by=By.XPATH, value = xpath)
+        product.click()
+
+    def close_offer(self, xpath: str = '//button[@class="needsclick klaviyo-close-form kl-private-reset-css-Xuajs1"]'):
         '''
         This function is used to close the discount offer pop-up window.
 
         Parameters:
         xpath (str): The Xpath of the pop-up window.
         '''
-        delay = 10
-        close_button = WebDriverWait(self.driver, delay).until(EC.presence_of_element_located((By.XPATH, xpath)))
-        close_button.click()
+
+        close_offer_button = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located((By.XPATH, xpath)))
+        close_offer_button.click()
 
     def get_links(self, xpath: str = '//*[@id="shopify-section-collection__main"]/div/div[1]/div[2]'):
         '''
         This function is used to obtain the links to product pages.
         
         Parameters:
-        xpath (str): The Xpath of the pop-up window.
+        xpaths (str): The Xpaths of the product containers.
         
         Returns:
             list: The list of links to product pages.
         '''
-        prod_container = self.driver.find_element(by=By.XPATH, value = xpath)
-        prod_list = prod_container.find_elements(by=By.XPATH, value = './div')
+        prod_container1 = self.driver.find_element(by=By.XPATH, value = xpath)
+        prod_list1 = prod_container1.find_elements(by=By.XPATH, value = './div')
         link_list = []
-        for product in prod_list:
+        for product in prod_list1:
+            a_tag = product.find_element(by=By.TAG_NAME, value='a')
+            link = a_tag.get_attribute('href')
+            link_list.append(link)
+
+        self.close_offer()
+        self.click_object('//*[@id="shopify-section-collection__main"]/div/div[2]/div/div/nav/a')
+
+        prod_container2 = self.driver.find_element(by=By.XPATH, value = xpath)
+        prod_list2 = prod_container2.find_elements(by=By.XPATH, value = './div')
+        for product in prod_list2:
             a_tag = product.find_element(by=By.TAG_NAME, value='a')
             link = a_tag.get_attribute('href')
             link_list.append(link)
         return link_list
-
-    def __click_product(self, xpath: str = '//*[@id="shopify-section-collection__main"]/div/div[1]/div[2]/div[4]/div/div[1]/div[2]/a'):
+    
+    def extract_image_link(self, xpath: str = '//*[@id="shopify-section-product__supplements"]/section[1]/section/div/div/div[1]/div/div[1]/div/div/div[4]'):
         '''
-        This function is used to click on a product.
+        This function is used to extract the link to a product's image from its web page.
         
         Parameters:
-        xpath (str): The Xpath of the pop-up window.
+            link(str): The link to the product page.
         '''
-        product = self.driver.find_element(by=By.XPATH, value = xpath)
-        product.click()
-
-    def __go_to_next_page(self, xpath: str = '//*[@id="shopify-section-collection__main"]/div/div[2]/div/div/nav/a'):
+        try:    
+            image_HTML = self.driver.find_element(by=By.XPATH, value=xpath)
+            src = image_HTML.get_attribute('src')
+            image_link = str(src)
+            return image_link
+        except:
+            pass
+        try:
+            image_HTML = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[1]/section/div/div/div[1]/div/div[1]')
+            src = image_HTML.get_attribute('src')
+            image_link = str(src)
+            return image_link
+        except:
+            pass
+ 
+    def product_id(self, link):
         '''
-        This function is used to navigate to the next page of products.
+        This function is used to generate a product ID from its web address.
+        
+        Parameters:
+            link(str): The link to the product page.
         '''
-        next_page = self.driver.find_element(by=By.XPATH, value= xpath)
-        next_page.click()
-    
+        id = link.replace('https://gorillamind.com/collections/all/products/', '')
+        if id[0:5] == 'https':
+            id = link.replace('https://gorillamind.com/products/', '')    
+        return id
+        
     def get_product_data(self, link):
         '''
         This function is used to create a dictionary containing all product data.
@@ -105,12 +143,12 @@ class Scraper:
         '''
         product_dict = {'Name': '', 'ID': '', 'UUID': '', 'Price': 0, 'Description': '', 'Number of Flavours': [], 'Rating': 0, 'Image Link': ""}
         self.driver.get(link)
-        product_dict['ID'] = self._product_id(link)
+        product_dict['ID'] = self.product_id(link)
         UUID = str(uuid.uuid4())
         UUID_1 = UUID.strip("UUID('")
         UUID_2 = UUID_1.strip(")'")
         product_dict['UUID'] = UUID_2
-        product_dict['Image Link'] = self._extract_image_link()
+        product_dict['Image Link'] = self.extract_image_link()
         try:
             product_dict['Name'] = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[1]/section/div/div/div[2]/div[1]/h1').text
         except:
@@ -151,58 +189,28 @@ class Scraper:
         
         return product_dict
 
-    def _product_id(self, link):
-        '''
-        This function is used to generate a product ID from its web address.
-        
-        Parameters:
-            link(str): The link to the product page.
-        '''
-        id = link.replace('https://gorillamind.com/collections/all/products/', '')
-        if id[0:5] == 'https':
-            id = link.replace('https://gorillamind.com/products/', '')    
-        return id
-
-    def _extract_image_link(self):
-        '''
-        This function is used to extract the link to a product's image from its web page.
-        
-        Parameters:
-            link(str): The link to the product page.
-        '''
-        try:    
-            image_HTML = self.driver.find_element(by=By.XPATH, value='/html/body/div[6]/section/div/div[2]/section[1]/section/div/div/div[1]/div/div[1]/div/div/div[1]/div/img')
-            src = image_HTML.get_attribute('src')
-            image_link = str(src)
-            return image_link
-        except:
-            pass
-        try:
-            image_HTML = self.driver.find_element(by=By.XPATH, value='/html/body/div[6]/section/div/div[2]/section[1]/section/div/div/div[1]/div/div[1]/div/div/div[2]/div/img')
-            src = image_HTML.get_attribute('src')
-            image_link = str(src)
-            return image_link
-        except:
-            pass
-
     def get_path_to_data(self, link):
         '''
         This function is used to create the path to the local folder for a given product from its product page link.
         
         Parameters:
-            link(str): The link to the product page.
+        ----------
+        link: str
+            The link to the product page.
         '''
-        id = self._product_id(link)
+        id = self.product_id(link)
         cwd = os.path.dirname(os.path.realpath(__file__))
         path = f'{cwd}/raw_data/{id}' 
         return path
-    
+
     def make_directory(self, path):
         '''
         This function is used to create a local folder for a given product in a specificed location.
         
         Parameters:
-            path(str): The path to the local folder.
+        ----------
+        path: str
+            The path to the local folder.
         '''
         if os.path.exists(path):
             pass
@@ -212,6 +220,13 @@ class Scraper:
     def save_data(self, data, path):
         '''
         This function is used to save the data of a product in a specified directory.
+
+        Parameters:
+        ----------
+        data: dict
+            The dictionary of product data
+        path: str
+            The path to the local folder.
         '''
         os.chdir(path)
         with open('data.json'.format(name = data["ID"]), 'w', encoding='utf-8') as f:
@@ -230,15 +245,17 @@ class Scraper:
         except:
             print(f'{id} image not found')
     
-    def return_home(self):
+    def _return_home(self):
         p = os.path.abspath(os.path.dirname(__file__))
         os.chdir(p)
            
     def upload_to_cloud(self, path):
         '''
         This function is used to upload a given product's json file to an amazon S3 bucket.
+
         Parameters:
-            link(str): The link to the product page.
+        ----------
+        link(str): The link to the product page.
         '''
         s3_client = boto3.client('s3')
         id = path.replace('/Users/jacobmetz/Documents/web_scraper/utils/raw_data/', '')
@@ -249,12 +266,19 @@ class Scraper:
         except:
             pass
     
-    def prevent_rescrape(self):
+    def _get_unscraped_links(self):
+        '''
+        This function prevents rescraping by comparing scraped ids with the ids of already scraped products in the SQL database.
+        
+        Returns:
+        --------
+        set: The set of unscraped links.
+        '''
         links = self.get_links()
         ids = set()
         for link in links:
             uids = []
-            id = self._product_id(link)
+            id = self.product_id(link)
             uids.append(id)
             ids.update(uids)
         
@@ -275,8 +299,7 @@ class Scraper:
         '''
         This function is used scrape all new product data from the gorilla mind website and return a dataframe of the scraped data.
         '''
-
-        links = self.prevent_rescrape()
+        links = self._get_unscraped_links()
         data_dicts = []
 
         for link in links:
@@ -287,7 +310,7 @@ class Scraper:
             self.save_data(data, path)
             self.download_image(data['Image Link'], data['ID'], path)
             self.upload_to_cloud(path)
-            self.return_home()
+            self._return_home()
 
         df = pd.DataFrame(data_dicts)
         return df

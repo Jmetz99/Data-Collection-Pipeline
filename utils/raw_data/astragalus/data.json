@@ -1,10 +1,10 @@
 {
     "Name": "ASTRAGALUS",
     "ID": "astragalus",
-    "UUID": "5d813577-d022-4fd1-8a56-7619a18747e6",
+    "UUID": "8e20393d-9a2d-4470-a9ba-5cb87a469293",
     "Price": "$19.99",
     "Description": "",
     "Number of Flavours": [],
-    "Rating": 0,
-    "Image Link": "None"
+    "Rating": 5.0,
+    "Image Link": null
 }
