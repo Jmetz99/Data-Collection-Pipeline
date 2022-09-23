@@ -17,5 +17,7 @@ engine.connect()
 
 if __name__ == '__main__':
     scraper = Scraper()
-    new_data = scraper.scrape_all_data()
-    new_data.to_sql('GorillaMindProductData', engine, if_exists='append')
+    scraper.driver.get('https://gorillamind.com/products/gorilla-mode')
+    image_link = scraper.extract_image_link()
+    print(image_link)
+    scraper.driver.quit()

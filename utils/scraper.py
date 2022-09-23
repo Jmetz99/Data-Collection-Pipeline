@@ -43,13 +43,12 @@ class Scraper:
         Parameters:
         ----------
         url: str 
-            The url link to the website to be scraped.
+            The url of the website to be scraped.
         '''
         chrome_options = Options()
         self.driver = webdriver.Chrome(options=chrome_options)
-        self.driver.get(url)
-        self.driver.maximize_window()
-    
+        # self.driver.get(url)
+        # self.driver.maximize_window()
 
     def click_object(self, xpath: str):
         '''
@@ -83,7 +82,7 @@ class Scraper:
         Parameters:
         ----------
         xpath: str
-            The Xpaths of the product containers.
+            The Xpath of the product container.
         
         Returns:
         -------
@@ -109,30 +108,20 @@ class Scraper:
             link_list.append(link)
         return link_list
     
-    def extract_image_link(self, xpath: str = '//*[@id="shopify-section-product__supplements"]/section[1]/section/div/div/div[1]/div/div[1]/div/div/div[4]'):
+    def extract_image_link(self, xpath: str = '//img[@class="lazyload--fade-in lazyautosizes lazyloaded"]'):
         '''
         This function is used to extract the link to a product's image from its web page.
         
         Parameters:
         ----------
-        link: str
-            The link to the product page.
+        xpath: str
+            The xpath of the product's image tag.
         '''
-        try:    
-            image_HTML = self.driver.find_element(by=By.XPATH, value=xpath)
-            src = image_HTML.get_attribute('src')
-            image_link = str(src)
-            return image_link
-        except:
-            pass
-        try:
-            image_HTML = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[1]/section/div/div/div[1]/div/div[1]')
-            src = image_HTML.get_attribute('src')
-            image_link = str(src)
-            return image_link
-        except:
-            pass
- 
+        img_tag = self.driver.find_element(by=By.XPATH, value=xpath)
+        src = img_tag.get_attribute('src')
+        image_link = str(src)
+        return image_link
+
     def product_id(self, link):
         '''
         This function is used to generate a product ID from its web address.
@@ -146,7 +135,6 @@ class Scraper:
         --------
         id: str 
             The user friendly id of product.
-
         '''
         id = link.replace('https://gorillamind.com/collections/all/products/', '')
         if id[0:5] == 'https':
@@ -169,12 +157,12 @@ class Scraper:
         '''
         product_dict = {'Name': '', 'ID': '', 'UUID': '', 'Price': 0, 'Description': '', 'Number of Flavours': [], 'Rating': 0, 'Image Link': ""}
         self.driver.get(link)
+        product_dict['Image Link'] = self.extract_image_link()
         product_dict['ID'] = self.product_id(link)
         UUID = str(uuid.uuid4())
         UUID_1 = UUID.strip("UUID('")
         UUID_2 = UUID_1.strip(")'")
         product_dict['UUID'] = UUID_2
-        product_dict['Image Link'] = self.extract_image_link()
         try:
             product_dict['Name'] = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[1]/section/div/div/div[2]/div[1]/h1').text
         except:
