@@ -47,8 +47,8 @@ class Scraper:
         '''
         chrome_options = Options()
         self.driver = webdriver.Chrome(options=chrome_options)
-        # self.driver.get(url)
-        # self.driver.maximize_window()
+        self.driver.get(url)
+        self.driver.maximize_window()
 
     def click_object(self, xpath: str):
         '''
@@ -108,7 +108,7 @@ class Scraper:
             link_list.append(link)
         return link_list
     
-    def extract_image_link(self, xpath: str = '//img[@class="lazyload--fade-in lazyautosizes lazyloaded"]'):
+    def extract_image_link(self, xpath: str = '//*[@class="image__container"]'):
         '''
         This function is used to extract the link to a product's image from its web page.
         
@@ -117,12 +117,17 @@ class Scraper:
         xpath: str
             The xpath of the product's image tag.
         '''
-        img_tag = self.driver.find_element(by=By.XPATH, value=xpath)
-        src = img_tag.get_attribute('src')
-        image_link = str(src)
-        return image_link
+        try:
+            container = self.driver.find_element(by=By.XPATH, value=xpath)
+            img_tag = container.find_element(by=By.TAG_NAME, value='img')
+            src = img_tag.get_attribute('src')
+            image_link = str(src)
+            return image_link
+        except:
+            pass
 
-    def product_id(self, link):
+
+    def _product_id(self, link):
         '''
         This function is used to generate a product ID from its web address.
         
@@ -158,7 +163,7 @@ class Scraper:
         product_dict = {'Name': '', 'ID': '', 'UUID': '', 'Price': 0, 'Description': '', 'Number of Flavours': [], 'Rating': 0, 'Image Link': ""}
         self.driver.get(link)
         product_dict['Image Link'] = self.extract_image_link()
-        product_dict['ID'] = self.product_id(link)
+        product_dict['ID'] = self._product_id(link)
         UUID = str(uuid.uuid4())
         UUID_1 = UUID.strip("UUID('")
         UUID_2 = UUID_1.strip(")'")
@@ -178,10 +183,11 @@ class Scraper:
             description = descrip_txt.replace('\n', " ")
             product_dict['Description'] = description
         except: 
-            pass
+            print(f'{product_dict["ID"]} description not found.')
+            
         try:
-            descrip_txt = self.driver.find_element(by=By.XPATH, value='/html/body/div[6]/section/div/div[2]/section[2]/div/div/div[1]/div/div[2]').text
-            description = descrip_txt.replace('\n', " ")
+            descrip_txt = self.driver.find_element(by=By.XPATH, value='//*[@class="image-with-text__text text-align-left content"]').text
+            descrip_txt.replace('\n', " ")
             product_dict['Description'] = description
         except:
             print(f'{product_dict["ID"]} description not found.')
@@ -217,7 +223,7 @@ class Scraper:
         path: str
             The path to the local folder.
         '''
-        id = self.product_id(link)
+        id = self._product_id(link)
         cwd = os.path.dirname(os.path.realpath(__file__))
         path = f'{cwd}/raw_data/{id}' 
         return path
@@ -266,7 +272,7 @@ class Scraper:
         '''
         os.chdir(path)
         try:
-            urllib.request.urlretrieve(image_link, f"{id}.jpeg")
+            urllib.request.urlretrieve(image_link, f"{id}.png")
         except:
             print(f'{id} image not found')
     
@@ -276,7 +282,7 @@ class Scraper:
         '''
         p = os.path.abspath(os.path.dirname(__file__))
         os.chdir(p)
-           
+    
     def upload_to_cloud(self, path):
         '''
         This function is used to upload a given product's json file to an amazon S3 bucket.
@@ -308,7 +314,7 @@ class Scraper:
         ids = set()
         for link in links:
             uids = []
-            id = self.product_id(link)
+            id = self._product_id(link)
             uids.append(id)
             ids.update(uids)
         

@@ -1,4 +1,3 @@
-from operator import concat
 from utils.scraper import Scraper
 from sqlalchemy import create_engine
 import pandas as pd
@@ -17,7 +16,5 @@ engine.connect()
 
 if __name__ == '__main__':
     scraper = Scraper()
-    scraper.driver.get('https://gorillamind.com/products/gorilla-mode')
-    image_link = scraper.extract_image_link()
-    print(image_link)
-    scraper.driver.quit()
+    new_data = scraper.scrape_all_data()
+    new_data.to_sql(name='gorilla', con=engine, if_exists = 'replace', index=False)
