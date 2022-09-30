@@ -47,8 +47,8 @@ class Scraper:
         '''
         chrome_options = Options()
         self.driver = webdriver.Chrome(options=chrome_options)
-        self.driver.get(url)
-        self.driver.maximize_window()
+        # self.driver.get(url)
+        # self.driver.maximize_window()
 
     def click_object(self, xpath: str):
         '''
@@ -283,21 +283,23 @@ class Scraper:
         p = os.path.abspath(os.path.dirname(__file__))
         os.chdir(p)
     
-    def upload_to_cloud(self, path):
+    def upload_to_cloud(self, bucket, path):
         '''
-        This function is used to upload a given product's json file to an amazon S3 bucket.
+        This function is used to upload a given product's json file and jpeg to a specified amazon s3 bucket.
 
         Parameters:
         ----------
         path: str
-            The path to the local folder.
+            The full path to the local folder.
+        bucket: str
+            The name of the s3 bucket.
         '''
         s3_client = boto3.client('s3')
         id = path.replace('/Users/jacobmetz/Documents/web_scraper/utils/raw_data/', '')
         
-        s3_client.upload_file(f'{path}/data.json', 'aicore-scraper-data', f'{id}.json')
+        s3_client.upload_file(f'{path}/data.json', bucket, f'{id}.json')
         try:
-            s3_client.upload_file(f'{path}/{id}.jpeg', 'aicore-scraper-data', f'{id}.jpeg')
+            s3_client.upload_file(f'{path}/{id}.jpeg', bucket, f'{id}.jpeg')
         except:
             pass
     

@@ -1,14 +1,20 @@
+import boto3
+from moto import mock_s3
 import json
 import os
 import imghdr
 from scraper import Scraper
-import sys
 import unittest
 import shutil
+import boto3
 
 class ScraperTestCase(unittest.TestCase):
     def setUp(self):
         self.scraper = Scraper()
+    
+    def tearDown(self):
+        self.scraper.driver.quit()
+        del self.scraper
 
     def test_close_offer(self):
         self.scraper.driver.get('https://gorillamind.com/collections/all?page=1')
@@ -63,15 +69,27 @@ class ScraperTestCase(unittest.TestCase):
         id = 'gorilla'
         self.scraper.make_directory(path)
         self.scraper.download_image(image_link, id, path)
-        self.assertEqual(imghdr.what('/Users/jacobmetz/Documents/web_scraper/utils/raw_data_test/gorilla.jpeg'), 'png')
+        self.assertEqual(imghdr.what('/Users/jacobmetz/Documents/web_scraper/utils/raw_data_test/gorilla.png'), 'png')
         shutil.rmtree(path)
 
-    # def test_upload_to_cloud(self):
+    def test_upload_to_cloud(self):
+         with mock_s3():
+            bucket = 'aicore-scraper-data'
+            conn = boto3.resource('s3', region_name='us-east-1')
+            conn.create_bucket(Bucket=bucket)
+            
+            path = '/Users/jacobmetz/Documents/web_scraper/utils/raw_data/gorilla-mode'
+            self.scraper.upload_to_cloud(bucket, path)
 
+            saved_json_object = conn.Object('aicore-scraper-data', 'gorilla-mode.json')
+            json_file = saved_json_object.get()['Body'].read().decode("utf-8")
+            json_content = json.loads(json_file)
+            self.assertEqual(json_content["Name"], "GORILLA MODE")
 
-    def tearDown(self):
-        self.scraper.driver.quit()
-        del self.scraper
+            # saved_jpeg_object = conn.Object('aicore-scraper-data', 'gorilla-mode.jpeg')
+            # response = saved_jpeg_object.get()['Body'].read()
+            # img = Image.open(response)
+            # self.assertEqual(imghdr.what(img), 'jpeg')
 
 if __name__ == '__main__':
     unittest.main(argv=[''], verbosity=2, exit=False)
