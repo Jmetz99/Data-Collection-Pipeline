@@ -45,10 +45,11 @@ class Scraper:
         url: str 
             The url of the website to be scraped.
         '''
-        chrome_options = Options()
-        self.driver = webdriver.Chrome(options=chrome_options)
-        # self.driver.get(url)
-        # self.driver.maximize_window()
+        options = webdriver.ChromeOptions()
+        options.add_argument('headless')
+        self.driver = webdriver.Chrome(chrome_options=options)
+        self.driver.get(url)
+        self.driver.maximize_window()
 
     def click_object(self, xpath: str):
         '''
@@ -320,7 +321,7 @@ class Scraper:
             uids.append(id)
             ids.update(uids)
         
-        db_ids = pd.read_sql_query('''SELECT "ID" FROM "GorillaMindProductData"''', engine)
+        db_ids = pd.read_sql_query('''SELECT "ID" FROM "gorilla"''', engine)
         old_ids = set(db_ids["ID"])
         sym_diff = list(ids.symmetric_difference(old_ids))
         
