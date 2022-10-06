@@ -1,0 +1,1519 @@
+1665052311706	geckodriver	INFO	Listening on 127.0.0.1:54890
+1665052312633	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "headless" "--no-sandbox" "--disable-dev-shm-usage" "--start-maximized" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileozMOqm"
+1665052313220	Marionette	INFO	Marionette enabled
+2022-10-06 11:31:53.276 plugin-container[18973:6072303] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:31:53.277 plugin-container[18973:6072303] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665052313433	Marionette	INFO	Listening on port 54901
+Read port: 54901
+1665052313529	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2022-10-06 11:31:53.604 plugin-container[18973:6072303] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:31:53.604 plugin-container[18973:6072303] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:31:53.605 plugin-container[18973:6072313] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:31:53.605 plugin-container[18973:6072313] nil host used in call to allowsAnyHTTPSCertificateForHost:
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileozMOqm/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+1665052326871	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+2022-10-06 10:32:12.495 plugin-container[19011:6073316] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:32:12.496 plugin-container[19011:6073316] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:32:12.497 plugin-container[19011:6073316] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:32:12.497 plugin-container[19011:6073316] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:32:12.497 plugin-container[19011:6073315] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:32:12.497 plugin-container[19011:6073315] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665052369512	geckodriver	INFO	Listening on 127.0.0.1:55053
+1665052370534	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "--start-maximized" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileLHK0O5"
+*** You are running in headless mode.
+2022-10-06 11:32:51.230 plugin-container[19106:6074351] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:32:51.235 plugin-container[19106:6074351] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665052371265	Marionette	INFO	Marionette enabled
+2022-10-06 11:32:51.268 plugin-container[19106:6074351] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:32:51.268 plugin-container[19106:6074351] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:32:51.268 plugin-container[19106:6074362] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:32:51.268 plugin-container[19106:6074362] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665052371279	Marionette	INFO	Listening on port 55064
+Read port: 55064
+1665052371827	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileLHK0O5/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 10:33:07.364 plugin-container[19150:6075348] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:33:07.365 plugin-container[19150:6075348] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:33:07.385 plugin-container[19150:6075348] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:33:07.385 plugin-container[19150:6075348] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:33:07.385 plugin-container[19150:6075343] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:33:07.385 plugin-container[19150:6075343] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665052445604	geckodriver	INFO	Listening on 127.0.0.1:55211
+1665052446608	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--no-sandbox" "--disable-dev-shm-usage" "--start-maximized" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofile0mvcsb"
+2022-10-06 11:34:07.507 plugin-container[19264:6076885] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:34:07.530 plugin-container[19264:6076885] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665052447587	Marionette	INFO	Marionette enabled
+2022-10-06 11:34:07.647 plugin-container[19264:6076885] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:34:07.647 plugin-container[19264:6076885] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:34:07.647 plugin-container[19264:6076887] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:34:07.647 plugin-container[19264:6076887] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665052447901	Marionette	INFO	Listening on port 55222
+Read port: 55222
+1665052448163	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofile0mvcsb/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 10:34:25.021 plugin-container[19303:6077944] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:34:25.022 plugin-container[19303:6077944] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:34:25.036 plugin-container[19303:6077944] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:34:25.036 plugin-container[19303:6077944] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:34:25.036 plugin-container[19303:6077949] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:34:25.036 plugin-container[19303:6077949] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665052490020	geckodriver	INFO	Listening on 127.0.0.1:55374
+1665052491034	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileSgfV9k"
+2022-10-06 11:34:51.571 plugin-container[19358:6078872] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:34:51.572 plugin-container[19358:6078872] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:34:51.574 plugin-container[19358:6078872] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:34:51.574 plugin-container[19358:6078872] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:34:51.575 plugin-container[19358:6078877] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:34:51.575 plugin-container[19358:6078877] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665052491611	Marionette	INFO	Marionette enabled
+1665052491661	Marionette	INFO	Listening on port 55385
+Read port: 55385
+1665052492011	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileSgfV9k/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 10:35:06.159 plugin-container[19388:6079800] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:35:06.160 plugin-container[19388:6079800] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:35:06.192 plugin-container[19388:6079800] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:35:06.192 plugin-container[19388:6079800] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:35:06.192 plugin-container[19388:6079810] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:35:06.192 plugin-container[19388:6079810] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665052648716	geckodriver	INFO	Listening on 127.0.0.1:55601
+1665052649929	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileIzXuz2"
+*** You are running in headless mode.
+1665052653743	Marionette	INFO	Marionette enabled
+2022-10-06 11:37:33.954 plugin-container[19628:6082958] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:37:33.954 plugin-container[19628:6082958] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665052653966	Marionette	INFO	Listening on port 55613
+Read port: 55613
+1665052654552	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2022-10-06 11:37:34.722 plugin-container[19628:6082958] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:37:34.722 plugin-container[19628:6082958] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:37:34.722 plugin-container[19628:6082956] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:37:34.722 plugin-container[19628:6082956] nil host used in call to allowsAnyHTTPSCertificateForHost:
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileIzXuz2/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 10:37:52.176 plugin-container[19668:6084084] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:37:52.176 plugin-container[19668:6084084] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:37:52.178 plugin-container[19668:6084084] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:37:52.178 plugin-container[19668:6084084] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:37:52.179 plugin-container[19668:6084096] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:37:52.179 plugin-container[19668:6084096] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665052749661	Marionette	INFO	Stopped listening on port 54901
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1665052751491	Marionette	INFO	Stopped listening on port 55222
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1665052753677	Marionette	INFO	Stopped listening on port 55385
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1665053081700	geckodriver	INFO	Listening on 127.0.0.1:49536
+1665053082607	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileVp9RJJ"
+*** You are running in headless mode.
+2022-10-06 11:44:42.857 plugin-container[1348:12323] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:44:42.857 plugin-container[1348:12323] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:44:42.859 plugin-container[1348:12323] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:44:42.859 plugin-container[1348:12323] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:44:42.859 plugin-container[1348:12321] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:44:42.859 plugin-container[1348:12321] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665053082859	Marionette	INFO	Marionette enabled
+1665053082866	Marionette	INFO	Listening on port 49547
+Read port: 49547
+1665053083046	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileVp9RJJ/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 10:44:56.972 plugin-container[1372:12999] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:44:56.973 plugin-container[1372:12999] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:44:56.974 plugin-container[1372:12999] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:44:56.974 plugin-container[1372:12999] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:44:56.975 plugin-container[1372:12997] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:44:56.975 plugin-container[1372:12997] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665053109852	geckodriver	INFO	Listening on 127.0.0.1:49703
+1665053110868	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofilekMSrH4"
+*** You are running in headless mode.
+2022-10-06 11:45:11.058 plugin-container[1390:13290] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:45:11.059 plugin-container[1390:13290] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:45:11.065 plugin-container[1390:13290] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:45:11.065 plugin-container[1390:13290] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:45:11.065 plugin-container[1390:13316] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:45:11.065 plugin-container[1390:13316] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665053111065	Marionette	INFO	Marionette enabled
+1665053111075	Marionette	INFO	Listening on port 49714
+Read port: 49714
+1665053111237	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofilekMSrH4/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 10:45:24.114 plugin-container[1412:13975] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:45:24.114 plugin-container[1412:13975] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:45:24.116 plugin-container[1412:13975] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:45:24.116 plugin-container[1412:13975] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:45:24.116 plugin-container[1412:13970] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:45:24.116 plugin-container[1412:13970] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665053130585	geckodriver	INFO	Listening on 127.0.0.1:49866
+1665053131602	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileGM5AHO"
+*** You are running in headless mode.
+2022-10-06 11:45:31.842 plugin-container[1426:14141] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:45:31.843 plugin-container[1426:14141] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665053131843	Marionette	INFO	Marionette enabled
+2022-10-06 11:45:31.845 plugin-container[1426:14141] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:45:31.845 plugin-container[1426:14141] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:45:31.845 plugin-container[1426:14139] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:45:31.845 plugin-container[1426:14139] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665053131873	Marionette	INFO	Listening on port 49873
+Read port: 49873
+1665053131973	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileGM5AHO/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 10:45:44.846 plugin-container[1447:14793] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:45:44.846 plugin-container[1447:14793] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:45:44.847 plugin-container[1447:14793] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:45:44.847 plugin-container[1447:14793] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:45:44.847 plugin-container[1447:14808] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:45:44.847 plugin-container[1447:14808] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665053181944	geckodriver	INFO	Listening on 127.0.0.1:50028
+1665053182958	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofilelypLPF"
+2022-10-06 11:46:23.211 plugin-container[1489:15340] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:46:23.211 plugin-container[1489:15340] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665053183214	Marionette	INFO	Marionette enabled
+2022-10-06 11:46:23.230 plugin-container[1489:15340] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:46:23.230 plugin-container[1489:15340] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:46:23.231 plugin-container[1489:15367] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:46:23.231 plugin-container[1489:15367] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665053183231	Marionette	INFO	Listening on port 50035
+Read port: 50035
+1665053183409	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofilelypLPF/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 10:46:39.165 plugin-container[1510:16140] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:46:39.166 plugin-container[1510:16140] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:46:39.168 plugin-container[1510:16140] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:46:39.168 plugin-container[1510:16140] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:46:39.168 plugin-container[1510:16135] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:46:39.168 plugin-container[1510:16135] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Handler function _httpStopRequest threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/server/actors/network-monitor/utils/network-utils.js:99:1
+exports.createNetworkEvent@resource://devtools/server/actors/network-monitor/utils/network-utils.js:188:33
+_createNetworkEvent@resource://devtools/server/actors/network-monitor/network-observer.js:733:32
+_httpStopRequest@resource://devtools/server/actors/network-monitor/network-observer.js:367:14
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 99, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/server/actors/network-monitor/utils/network-utils.js", 99))
+Handler function _httpStopRequest threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/server/actors/network-monitor/utils/network-utils.js:99:1
+exports.createNetworkEvent@resource://devtools/server/actors/network-monitor/utils/network-utils.js:188:33
+_createNetworkEvent@resource://devtools/server/actors/network-monitor/network-observer.js:733:32
+_httpStopRequest@resource://devtools/server/actors/network-monitor/network-observer.js:367:14
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 99, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/server/actors/network-monitor/utils/network-utils.js", 99))
+Handler function threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/server/actors/network-monitor/utils/network-utils.js:99:1
+exports.createNetworkEvent@resource://devtools/server/actors/network-monitor/utils/network-utils.js:188:33
+_createNetworkEvent@resource://devtools/server/actors/network-monitor/network-observer.js:733:32
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:779:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:660:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 99, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/server/actors/network-monitor/utils/network-utils.js", 99))
+Handler function threw an exception: TypeError: httpActivity.owner is null
+Stack: _onResponseHeader@resource://devtools/server/actors/network-monitor/network-observer.js:1041:5
+_dispatchActivity@resource://devtools/server/actors/network-monitor/network-observer.js:581:14
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:690:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 1041, column: 5
+console.error: (new TypeError("httpActivity.owner is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 1041))
+Handler function _httpStopRequest threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/server/actors/network-monitor/utils/network-utils.js:99:1
+exports.createNetworkEvent@resource://devtools/server/actors/network-monitor/utils/network-utils.js:188:33
+_createNetworkEvent@resource://devtools/server/actors/network-monitor/network-observer.js:733:32
+_httpStopRequest@resource://devtools/server/actors/network-monitor/network-observer.js:367:14
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 99, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/server/actors/network-monitor/utils/network-utils.js", 99))
+console.error: "Unable to find target with innerWindowId:6442450945"
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.error: "Failed to start [root-node] legacy listener for target null" (new Error("Connection closed, pending request to server0.conn0.windowGlobal6442450974/domwalker21, type watchRootNode failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:301:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:49:19\nmodule.exports@resource://devtools/shared/commands/resource/legacy-listeners/root-node.js:60:31\n", "resource://devtools/shared/protocol/Front.js", 107))
+console.error: "Unable to find target with innerWindowId:6442450945"
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.error: "Unable to find target with innerWindowId:6442450945"
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.error: "Unable to find target with innerWindowId:6442450972"
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.error: "Unable to find target with innerWindowId:6442450972"
+console.warn: "Listener for event 'frame' did not return a promise."
+console.error: "Error while calling actor 'domwalker's method 'getEmbedderElement'" "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [inIDeepTreeWalker.currentNode]"
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Error while destroying front:" "inspector" (new Error("Protocol error (NS_ERROR_FAILURE): Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [inIDeepTreeWalker.currentNode] from: server0.conn0.windowGlobal6442451001/domwalker212 (resource://devtools/server/actors/inspector/document-walker.js:79:0)", "resource://devtools/shared/protocol/Front.js", 384))
+console.error: "Failed to start [root-node] legacy listener for target null" (new Error("Protocol error (NS_ERROR_FAILURE): Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [inIDeepTreeWalker.currentNode] from: server0.conn0.windowGlobal6442451001/domwalker212 (resource://devtools/server/actors/inspector/document-walker.js:79:0)", "resource://devtools/shared/protocol/Front.js", 384))
+console.error: "Unable to find target with innerWindowId:6442450972"
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 384: Error: Protocol error (NS_ERROR_FAILURE): Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [inIDeepTreeWalker.currentNode] from: server0.conn0.windowGlobal6442451001/domwalker212 (resource://devtools/server/actors/inspector/document-walker.js:79:0)
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.error: "Failed to start [root-node] legacy listener for target null" (new TypeError("inspectorFront.walker is null", "resource://devtools/shared/commands/resource/legacy-listeners/root-node.js", 50))
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.error: "isValidHoverTarget rejected with unexpected reason:"
+console.error: (new TypeError("rule is undefined", "resource://devtools/client/inspector/rules/utils/utils.js", 186))
+console.error: "isValidHoverTarget rejected with unexpected reason:"
+console.error: (new TypeError("rule is undefined", "resource://devtools/client/inspector/rules/utils/utils.js", 186))
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.error: (new TypeError("topBrowsingContext is null", "resource://devtools/server/actors/watcher/browsing-context-helpers.jsm", 391))
+Handler function threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/server/actors/network-monitor/utils/network-utils.js:99:1
+exports.createNetworkEvent@resource://devtools/server/actors/network-monitor/utils/network-utils.js:188:33
+_createNetworkEvent@resource://devtools/server/actors/network-monitor/network-observer.js:733:32
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:779:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:660:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 99, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/server/actors/network-monitor/utils/network-utils.js", 99))
+Handler function threw an exception: TypeError: httpActivity.owner is null
+Stack: _onResponseHeader@resource://devtools/server/actors/network-monitor/network-observer.js:1041:5
+_dispatchActivity@resource://devtools/server/actors/network-monitor/network-observer.js:581:14
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:690:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 1041, column: 5
+console.error: (new TypeError("httpActivity.owner is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 1041))
+Handler function _httpStopRequest threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/server/actors/network-monitor/utils/network-utils.js:99:1
+exports.createNetworkEvent@resource://devtools/server/actors/network-monitor/utils/network-utils.js:188:33
+_createNetworkEvent@resource://devtools/server/actors/network-monitor/network-observer.js:733:32
+_httpStopRequest@resource://devtools/server/actors/network-monitor/network-observer.js:360:14
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 99, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/server/actors/network-monitor/utils/network-utils.js", 99))
+Handler function threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/server/actors/network-monitor/utils/network-utils.js:99:1
+exports.createNetworkEvent@resource://devtools/server/actors/network-monitor/utils/network-utils.js:188:33
+_createNetworkEvent@resource://devtools/server/actors/network-monitor/network-observer.js:733:32
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:779:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:660:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 99, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/server/actors/network-monitor/utils/network-utils.js", 99))
+Handler function threw an exception: TypeError: httpActivity.owner is null
+Stack: _sendRequestBody@resource://devtools/server/actors/network-monitor/network-observer.js:1444:7
+_dispatchActivity@resource://devtools/server/actors/network-monitor/network-observer.js:578:14
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:690:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 1444, column: 7
+console.error: (new TypeError("httpActivity.owner is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 1444))
+Handler function threw an exception: TypeError: httpActivity.owner is null
+Stack: _onResponseHeader@resource://devtools/server/actors/network-monitor/network-observer.js:1041:5
+_dispatchActivity@resource://devtools/server/actors/network-monitor/network-observer.js:581:14
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:690:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 1041, column: 5
+console.error: (new TypeError("httpActivity.owner is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 1041))
+Handler function _httpStopRequest threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/server/actors/network-monitor/utils/network-utils.js:99:1
+exports.createNetworkEvent@resource://devtools/server/actors/network-monitor/utils/network-utils.js:188:33
+_createNetworkEvent@resource://devtools/server/actors/network-monitor/network-observer.js:733:32
+_httpStopRequest@resource://devtools/server/actors/network-monitor/network-observer.js:360:14
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 99, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/server/actors/network-monitor/utils/network-utils.js", 99))
+1665053476892	geckodriver	INFO	Listening on 127.0.0.1:50467
+1665053477905	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileZz4QH2"
+1665053478180	Marionette	INFO	Marionette enabled
+2022-10-06 11:51:18.180 plugin-container[1672:19988] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:51:18.180 plugin-container[1672:19988] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665053478196	Marionette	INFO	Listening on port 50474
+2022-10-06 11:51:18.199 plugin-container[1672:19988] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:51:18.199 plugin-container[1672:19988] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:51:18.199 plugin-container[1672:19996] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:51:18.199 plugin-container[1672:19996] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 50474
+1665053478328	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileZz4QH2/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 10:51:33.512 plugin-container[1690:20823] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:51:33.513 plugin-container[1690:20823] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:51:33.514 plugin-container[1690:20823] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:51:33.514 plugin-container[1690:20823] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:51:33.514 plugin-container[1690:20846] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:51:33.514 plugin-container[1690:20846] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665053639355	geckodriver	INFO	Listening on 127.0.0.1:50691
+1665053640374	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileotIxAQ"
+2022-10-06 11:54:00.669 plugin-container[1744:22839] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:54:00.669 plugin-container[1744:22839] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665053640675	Marionette	INFO	Marionette enabled
+2022-10-06 11:54:00.675 plugin-container[1744:22839] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:54:00.675 plugin-container[1744:22839] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:54:00.676 plugin-container[1744:22844] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:54:00.676 plugin-container[1744:22844] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665053640693	Marionette	INFO	Listening on port 50699
+Read port: 50699
+1665053640885	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileotIxAQ/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 10:54:16.503 plugin-container[1763:23582] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:54:16.504 plugin-container[1763:23582] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:54:16.511 plugin-container[1763:23582] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:54:16.511 plugin-container[1763:23582] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:54:16.511 plugin-container[1763:23577] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:54:16.511 plugin-container[1763:23577] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665053685426	Marionette	INFO	Stopped listening on port 50474
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1665053686897	Marionette	INFO	Stopped listening on port 50035
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1665053690881	Marionette	INFO	Stopped listening on port 50699
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1665053757939	geckodriver	INFO	Listening on 127.0.0.1:51098
+1665053758955	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofile0hliJG"
+2022-10-06 11:55:59.226 plugin-container[1830:24924] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:55:59.226 plugin-container[1830:24924] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665053759228	Marionette	INFO	Marionette enabled
+1665053759245	Marionette	INFO	Listening on port 51113
+2022-10-06 11:55:59.245 plugin-container[1830:24924] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:55:59.245 plugin-container[1830:24924] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:55:59.245 plugin-container[1830:24926] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:55:59.245 plugin-container[1830:24926] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 51113
+1665053759370	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofile0hliJG/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 10:56:13.718 plugin-container[1847:25634] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:56:13.719 plugin-container[1847:25634] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:56:13.725 plugin-container[1847:25634] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:56:13.725 plugin-container[1847:25634] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 10:56:13.725 plugin-container[1847:25632] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 10:56:13.725 plugin-container[1847:25632] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665054012435	geckodriver	INFO	Listening on 127.0.0.1:52149
+1665054013450	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofilevS8gnm"
+2022-10-06 12:00:13.722 plugin-container[1934:27895] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:00:13.722 plugin-container[1934:27895] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665054013725	Marionette	INFO	Marionette enabled
+1665054013740	Marionette	INFO	Listening on port 52161
+2022-10-06 12:00:13.741 plugin-container[1934:27895] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:00:13.741 plugin-container[1934:27895] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:00:13.741 plugin-container[1934:27922] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:00:13.741 plugin-container[1934:27922] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 52161
+1665054013865	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofilevS8gnm/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 11:00:28.769 plugin-container[1952:28624] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:00:28.769 plugin-container[1952:28624] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:00:28.771 plugin-container[1952:28624] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:00:28.771 plugin-container[1952:28624] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:00:28.771 plugin-container[1952:28631] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:00:28.771 plugin-container[1952:28631] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/gorilla-mode-starter-pack, line 7266: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+1665054073987	geckodriver	INFO	Listening on 127.0.0.1:52585
+1665054074998	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofile6njZqI"
+*** You are running in headless mode.
+2022-10-06 12:01:15.188 plugin-container[2008:29636] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:01:15.189 plugin-container[2008:29636] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665054075195	Marionette	INFO	Marionette enabled
+2022-10-06 12:01:15.196 plugin-container[2008:29636] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:01:15.196 plugin-container[2008:29636] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:01:15.196 plugin-container[2008:29638] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:01:15.196 plugin-container[2008:29638] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665054075207	Marionette	INFO	Listening on port 52598
+Read port: 52598
+1665054075366	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofile6njZqI/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 11:01:28.466 plugin-container[2035:30360] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:01:28.466 plugin-container[2035:30360] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:01:28.469 plugin-container[2035:30360] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:01:28.469 plugin-container[2035:30360] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:01:28.469 plugin-container[2035:30370] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:01:28.469 plugin-container[2035:30370] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665054091213	geckodriver	INFO	Listening on 127.0.0.1:52823
+1665054092234	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileyAuh6W"
+*** You are running in headless mode.
+2022-10-06 12:01:32.457 plugin-container[2049:30507] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:01:32.457 plugin-container[2049:30507] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:01:32.459 plugin-container[2049:30507] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:01:32.459 plugin-container[2049:30507] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:01:32.459 plugin-container[2049:30505] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:01:32.459 plugin-container[2049:30505] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665054092464	Marionette	INFO	Marionette enabled
+1665054092481	Marionette	INFO	Listening on port 52835
+Read port: 52835
+1665054092661	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileyAuh6W/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 11:01:47.195 plugin-container[2070:31050] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:01:47.195 plugin-container[2070:31050] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:01:47.197 plugin-container[2070:31050] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:01:47.197 plugin-container[2070:31050] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:01:47.197 plugin-container[2070:31045] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:01:47.197 plugin-container[2070:31045] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://gorillamind.com/collections/all/products/gorilla-mode-glycerol-bundle, line 8331: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 2: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+JavaScript error: https://gorillamind.com/collections/all/products/glycerol-nitric-bundle, line 7675: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 2: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+JavaScript error: https://gorillamind.com/collections/all/products/skin-care-bundle, line 7262: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 2: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 2: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://gorillamind.com/collections/all/products/fat-burner-bundle, line 7307: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 2: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 2: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/gorilla-mode-post-workout-eaas, line 7333: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 1: TypeError: e[0] is undefined
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 2: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://gorillamind.com/collections/all/products/copy-of-gorilla-mode, line 7435: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/high-stim-peak-performance-stack, line 7427: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/gorilla-mode-nitric-bundle, line 8921: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/shroom-smooth-bundle, line 7307: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 2: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/gorilla-mode-stim-nitric-bundle, line 8215: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 2: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 2: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 2: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 2: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+JavaScript error: https://gorillamind.com/collections/all/products/nootropics-stack, line 7396: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 2: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/fat-burners-bundle, line 7307: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 2: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 1: TypeError: e[0] is undefined
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 2: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 2: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 2: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 2: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+JavaScript error: https://gorillamind.com/collections/all/products/shroom-energy-bundle, line 7335: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/gorilla-mode-protein-post-workout-bundle, line 7285: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+1665054509197	geckodriver	INFO	Listening on 127.0.0.1:55114
+1665054510213	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofile4K3ylm"
+*** You are running in headless mode.
+1665054510646	Marionette	INFO	Marionette enabled
+1665054510654	Marionette	INFO	Listening on port 55125
+2022-10-06 12:08:30.713 plugin-container[2799:48521] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:08:30.713 plugin-container[2799:48521] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:08:30.723 plugin-container[2799:48521] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:08:30.723 plugin-container[2799:48521] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:08:30.723 plugin-container[2799:48554] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:08:30.723 plugin-container[2799:48554] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 55125
+1665054510792	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofile4K3ylm/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+1665054524974	geckodriver	INFO	Listening on 127.0.0.1:55352
+1665054524981	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofilezpAolq"
+*** You are running in headless mode.
+2022-10-06 11:08:45.138 plugin-container[2822:49272] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:08:45.138 plugin-container[2822:49272] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:08:45.141 plugin-container[2822:49272] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:08:45.141 plugin-container[2822:49272] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:08:45.142 plugin-container[2822:49304] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:08:45.142 plugin-container[2822:49304] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:08:45.242 plugin-container[2825:49336] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:08:45.242 plugin-container[2825:49336] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:08:45.244 plugin-container[2825:49336] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:08:45.244 plugin-container[2825:49336] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:08:45.244 plugin-container[2825:49351] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:08:45.244 plugin-container[2825:49351] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665054525253	Marionette	INFO	Marionette enabled
+1665054525268	Marionette	INFO	Listening on port 55357
+Read port: 55357
+1665054525435	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofilezpAolq/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 11:08:58.245 plugin-container[2851:50027] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:08:58.245 plugin-container[2851:50027] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:08:58.246 plugin-container[2851:50027] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:08:58.246 plugin-container[2851:50027] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:08:58.246 plugin-container[2851:50035] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:08:58.246 plugin-container[2851:50035] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665054592427	geckodriver	INFO	Listening on 127.0.0.1:55792
+1665054593440	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileWHvioO"
+*** You are running in headless mode.
+1665054593682	Marionette	INFO	Marionette enabled
+2022-10-06 12:09:53.684 plugin-container[2882:50523] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:09:53.684 plugin-container[2882:50523] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665054593689	Marionette	INFO	Listening on port 55803
+2022-10-06 12:09:53.689 plugin-container[2882:50523] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:09:53.689 plugin-container[2882:50523] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:09:53.689 plugin-container[2882:50528] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:09:53.689 plugin-container[2882:50528] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 55803
+1665054593864	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileWHvioO/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 11:10:06.820 plugin-container[2916:51219] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:10:06.820 plugin-container[2916:51219] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:10:06.824 plugin-container[2916:51219] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:10:06.824 plugin-container[2916:51219] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:10:06.824 plugin-container[2916:51222] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:10:06.824 plugin-container[2916:51222] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665054855557	geckodriver	INFO	Listening on 127.0.0.1:57108
+1665054856577	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofilebm9WOY"
+1665054856962	Marionette	INFO	Marionette enabled
+2022-10-06 12:14:16.981 plugin-container[3030:53357] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:14:16.982 plugin-container[3030:53357] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:14:17.002 plugin-container[3030:53357] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:14:17.002 plugin-container[3030:53357] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:14:17.002 plugin-container[3030:53359] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:14:17.002 plugin-container[3030:53359] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665054857024	Marionette	INFO	Listening on port 57124
+Read port: 57124
+1665054857160	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofilebm9WOY/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 11:14:32.507 plugin-container[3054:54104] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:14:32.507 plugin-container[3054:54104] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:14:32.510 plugin-container[3054:54104] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:14:32.510 plugin-container[3054:54104] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:14:32.510 plugin-container[3054:54133] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:14:32.510 plugin-container[3054:54133] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665054909370	Marionette	INFO	Stopped listening on port 57124
+1665054909695	Marionette	INFO	Stopped listening on port 52161
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1665054909857	Marionette	INFO	Stopped listening on port 51113
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1665055481586	geckodriver	INFO	Listening on 127.0.0.1:49490
+1665055482507	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofile4nsmUM"
+*** You are running in headless mode.
+2022-10-06 12:24:43.033 plugin-container[1367:12900] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:24:43.033 plugin-container[1367:12900] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665055483044	Marionette	INFO	Marionette enabled
+2022-10-06 12:24:43.060 plugin-container[1367:12900] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:24:43.060 plugin-container[1367:12900] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:24:43.060 plugin-container[1367:12929] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:24:43.060 plugin-container[1367:12929] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665055483075	Marionette	INFO	Listening on port 49501
+Read port: 49501
+1665055483186	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofile4nsmUM/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 11:24:57.682 plugin-container[1387:13675] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:24:57.682 plugin-container[1387:13675] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:24:57.685 plugin-container[1387:13675] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:24:57.685 plugin-container[1387:13675] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:24:57.685 plugin-container[1387:13686] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:24:57.685 plugin-container[1387:13686] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665055542854	geckodriver	INFO	Listening on 127.0.0.1:49693
+1665055543875	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofiledwTjWV"
+*** You are running in headless mode.
+1665055544080	Marionette	INFO	Marionette enabled
+2022-10-06 12:25:44.082 plugin-container[1413:14319] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:25:44.082 plugin-container[1413:14319] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:25:44.084 plugin-container[1413:14319] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:25:44.084 plugin-container[1413:14319] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:25:44.084 plugin-container[1413:14344] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:25:44.084 plugin-container[1413:14344] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665055544110	Marionette	INFO	Listening on port 49706
+Read port: 49706
+1665055544209	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofiledwTjWV/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 11:25:57.063 plugin-container[1432:14982] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:25:57.063 plugin-container[1432:14982] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:25:57.066 plugin-container[1432:14982] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:25:57.066 plugin-container[1432:14982] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:25:57.066 plugin-container[1432:14987] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:25:57.066 plugin-container[1432:14987] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665055677678	geckodriver	INFO	Listening on 127.0.0.1:50298
+1665055678699	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileSeoZc8"
+*** You are running in headless mode.
+2022-10-06 12:27:58.906 plugin-container[1522:16481] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:27:58.907 plugin-container[1522:16481] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665055678911	Marionette	INFO	Marionette enabled
+2022-10-06 12:27:58.911 plugin-container[1522:16481] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:27:58.911 plugin-container[1522:16481] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:27:58.912 plugin-container[1522:16479] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:27:58.912 plugin-container[1522:16479] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665055678918	Marionette	INFO	Listening on port 50309
+Read port: 50309
+1665055679079	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileSeoZc8/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/gorilla-mode-starter-pack, line 7266: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 11:28:25.729 plugin-container[1562:17677] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:28:25.729 plugin-container[1562:17677] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:28:25.732 plugin-container[1562:17677] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:28:25.732 plugin-container[1562:17677] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:28:25.732 plugin-container[1562:17688] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:28:25.732 plugin-container[1562:17688] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665055722412	geckodriver	INFO	Listening on 127.0.0.1:50654
+1665055723433	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileewq53D"
+*** You are running in headless mode.
+2022-10-06 12:28:43.655 plugin-container[1581:17959] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:28:43.655 plugin-container[1581:17959] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665055723658	Marionette	INFO	Marionette enabled
+2022-10-06 12:28:43.658 plugin-container[1581:17959] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:28:43.658 plugin-container[1581:17959] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:28:43.659 plugin-container[1581:17957] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:28:43.659 plugin-container[1581:17957] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665055723665	Marionette	INFO	Listening on port 50665
+Read port: 50665
+1665055723838	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileewq53D/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 11:28:56.765 plugin-container[1599:18600] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:28:56.766 plugin-container[1599:18600] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:28:56.768 plugin-container[1599:18600] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:28:56.768 plugin-container[1599:18600] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:28:56.768 plugin-container[1599:18607] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:28:56.768 plugin-container[1599:18607] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665055800560	geckodriver	INFO	Listening on 127.0.0.1:51126
+1665055801573	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileW2dOpf"
+*** You are running in headless mode.
+1665055801791	Marionette	INFO	Marionette enabled
+2022-10-06 12:30:01.793 plugin-container[1672:19225] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:30:01.793 plugin-container[1672:19225] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:30:01.795 plugin-container[1672:19225] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:30:01.795 plugin-container[1672:19225] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:30:01.795 plugin-container[1672:19246] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:30:01.795 plugin-container[1672:19246] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665055801798	Marionette	INFO	Listening on port 51137
+Read port: 51137
+1665055801923	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileW2dOpf/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 2: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/gorilla-mode-glycerol-bundle, line 8331: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/high-stim-peak-performance-stack, line 7427: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/nootropics-stack, line 7396: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 2: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+JavaScript error: https://gorillamind.com/collections/all/products/fat-burner-bundle, line 7307: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://gorillamind.com/collections/all/products/copy-of-gorilla-mode, line 7435: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 2: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/shroom-energy-bundle, line 7335: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/gorilla-mode-post-workout-eaas, line 7333: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://staticw2.yotpo.com/lF5R8plWrZ8Gbqx3PV3Xz8ePOCfMEgy4ucGmZpog/widget.js, line 2: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 11:52:33.325 plugin-container[2187:32254] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:52:33.325 plugin-container[2187:32254] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:52:33.328 plugin-container[2187:32254] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:52:33.328 plugin-container[2187:32254] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 11:52:33.328 plugin-container[2187:32248] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 11:52:33.328 plugin-container[2187:32248] nil host used in call to allowsAnyHTTPSCertificateForHost:
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1665059756735	geckodriver	INFO	Listening on 127.0.0.1:60117
+1665059757753	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofilekhKZhH"
+*** You are running in headless mode.
+1665059758361	Marionette	INFO	Marionette enabled
+1665059758379	Marionette	INFO	Listening on port 60124
+Read port: 60124
+2022-10-06 13:35:58.432 plugin-container[4733:53966] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:35:58.432 plugin-container[4733:53966] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:35:58.455 plugin-container[4733:53966] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:35:58.455 plugin-container[4733:53966] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:35:58.455 plugin-container[4733:53968] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:35:58.455 plugin-container[4733:53968] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665059758507	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofilekhKZhH/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 12:36:23.274 plugin-container[4784:55130] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:36:23.274 plugin-container[4784:55130] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:36:23.275 plugin-container[4784:55130] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:36:23.275 plugin-container[4784:55130] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:36:23.275 plugin-container[4784:55152] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:36:23.275 plugin-container[4784:55152] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665059902535	geckodriver	INFO	Listening on 127.0.0.1:60581
+1665059903548	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileYHcP7w"
+*** You are running in headless mode.
+1665059903886	Marionette	INFO	Marionette enabled
+1665059903893	Marionette	INFO	Listening on port 60588
+2022-10-06 13:38:23.895 plugin-container[4993:57586] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:38:23.895 plugin-container[4993:57586] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:38:23.898 plugin-container[4993:57586] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:38:23.898 plugin-container[4993:57586] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:38:23.898 plugin-container[4993:57591] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:38:23.898 plugin-container[4993:57591] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 60588
+1665059904022	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileYHcP7w/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/skin-care-bundle, line 7262: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/fat-burner-bundle, line 7307: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/high-stim-peak-performance-stack, line 7427: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://gorillamind.com/collections/all/products/fat-burners-bundle, line 7307: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/gorilla-mode-glycerol-bundle, line 8331: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/gorilla-mode-starter-pack, line 7266: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/copy-of-gorilla-mode, line 7435: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/nootropics-stack, line 7396: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/gorilla-mode-post-workout-eaas, line 7333: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/gorilla-mode-protein-post-workout-bundle, line 7285: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/shroom-energy-bundle, line 7335: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/gorilla-mode-stim-nitric-bundle, line 8215: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/shroom-smooth-bundle, line 7307: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/gorilla-mode-nitric-bundle, line 8921: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: https://gorillamind.com/collections/all/products/glycerol-nitric-bundle, line 7675: SyntaxError: "" string literal contains an unescaped line break
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 12:41:26.048 plugin-container[9041:78722] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:41:26.048 plugin-container[9041:78722] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:41:26.051 plugin-container[9041:78722] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:41:26.051 plugin-container[9041:78722] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:41:26.051 plugin-container[9041:78741] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:41:26.051 plugin-container[9041:78741] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665060261195	geckodriver	INFO	Listening on 127.0.0.1:61150
+1665060262210	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofile1lPX6S"
+*** You are running in headless mode.
+2022-10-06 13:44:22.518 plugin-container[9349:80780] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:44:22.518 plugin-container[9349:80780] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665060262524	Marionette	INFO	Marionette enabled
+1665060262531	Marionette	INFO	Listening on port 61157
+2022-10-06 13:44:22.531 plugin-container[9349:80780] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:44:22.531 plugin-container[9349:80780] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:44:22.532 plugin-container[9349:80786] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:44:22.532 plugin-container[9349:80786] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 61157
+1665060262704	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofile1lPX6S/search.json.mozlz4", (void 0)))
+1665060276017	geckodriver	INFO	Listening on 127.0.0.1:61189
+1665060277032	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileeN85vE"
+*** You are running in headless mode.
+2022-10-06 13:44:37.252 plugin-container[9392:81282] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:44:37.253 plugin-container[9392:81282] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:44:37.254 plugin-container[9392:81282] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:44:37.254 plugin-container[9392:81282] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:44:37.255 plugin-container[9392:81280] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:44:37.255 plugin-container[9392:81280] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665060277255	Marionette	INFO	Marionette enabled
+1665060277289	Marionette	INFO	Listening on port 61196
+Read port: 61196
+1665060277437	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileeN85vE/search.json.mozlz4", (void 0)))
+1665060337665	geckodriver	INFO	Listening on 127.0.0.1:61242
+1665060338677	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofilena7yZV"
+*** You are running in headless mode.
+1665060339001	Marionette	INFO	Marionette enabled
+2022-10-06 13:45:39.003 plugin-container[9466:82388] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:45:39.003 plugin-container[9466:82388] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665060339008	Marionette	INFO	Listening on port 61250
+2022-10-06 13:45:39.008 plugin-container[9466:82388] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:45:39.008 plugin-container[9466:82388] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:45:39.009 plugin-container[9466:82385] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:45:39.009 plugin-container[9466:82385] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 61250
+1665060339140	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofilena7yZV/search.json.mozlz4", (void 0)))
+1665060351748	geckodriver	INFO	Listening on 127.0.0.1:61279
+1665060352769	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofile8R5ShV"
+*** You are running in headless mode.
+2022-10-06 13:45:52.997 plugin-container[9503:82873] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:45:52.998 plugin-container[9503:82873] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:45:52.999 plugin-container[9503:82873] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:45:52.999 plugin-container[9503:82873] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:45:53.000 plugin-container[9503:82871] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:45:53.000 plugin-container[9503:82871] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665060353003	Marionette	INFO	Marionette enabled
+1665060353034	Marionette	INFO	Listening on port 61286
+Read port: 61286
+1665060353174	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofile8R5ShV/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 12:46:07.313 plugin-container[9543:83639] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:46:07.319 plugin-container[9543:83639] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:46:07.322 plugin-container[9543:83639] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:46:07.322 plugin-container[9543:83639] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:46:07.322 plugin-container[9543:83659] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:46:07.322 plugin-container[9543:83659] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665060402585	geckodriver	INFO	Listening on 127.0.0.1:61472
+1665060403594	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofile1cpMNt"
+*** You are running in headless mode.
+1665060403893	Marionette	INFO	Marionette enabled
+1665060403899	Marionette	INFO	Listening on port 61479
+2022-10-06 13:46:43.902 plugin-container[9622:84234] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:46:43.902 plugin-container[9622:84234] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:46:43.904 plugin-container[9622:84234] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:46:43.904 plugin-container[9622:84234] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:46:43.905 plugin-container[9622:84243] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:46:43.905 plugin-container[9622:84243] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 61479
+1665060404019	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofile1cpMNt/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 12:46:57.597 plugin-container[9652:84905] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:46:57.604 plugin-container[9652:84905] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:46:57.606 plugin-container[9652:84905] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:46:57.606 plugin-container[9652:84905] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:46:57.606 plugin-container[9652:84910] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:46:57.606 plugin-container[9652:84910] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+1665060454794	geckodriver	INFO	Listening on 127.0.0.1:61669
+1665060455814	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileldYphl"
+*** You are running in headless mode.
+1665060456167	Marionette	INFO	Marionette enabled
+1665060456175	Marionette	INFO	Listening on port 61676
+2022-10-06 13:47:36.182 plugin-container[9708:85734] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:47:36.182 plugin-container[9708:85734] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:47:36.185 plugin-container[9708:85734] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:47:36.185 plugin-container[9708:85734] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:47:36.185 plugin-container[9708:85737] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:47:36.185 plugin-container[9708:85737] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 61676
+1665060456342	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileldYphl/search.json.mozlz4", (void 0)))
+2022-10-06 12:47:51.559 plugin-container[9747:86448] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:47:51.560 plugin-container[9747:86448] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:47:51.561 plugin-container[9747:86448] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:47:51.561 plugin-container[9747:86448] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:47:51.561 plugin-container[9747:86453] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:47:51.561 plugin-container[9747:86453] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665060494505	geckodriver	INFO	Listening on 127.0.0.1:61869
+1665060494512	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileqoqehi"
+*** You are running in headless mode.
+1665060494887	Marionette	INFO	Marionette enabled
+1665060494893	Marionette	INFO	Listening on port 61874
+2022-10-06 13:48:14.895 plugin-container[9800:87181] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:48:14.895 plugin-container[9800:87181] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:48:14.904 plugin-container[9800:87181] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:48:14.904 plugin-container[9800:87181] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:48:14.904 plugin-container[9800:87186] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:48:14.904 plugin-container[9800:87186] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 61874
+1665060495021	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileqoqehi/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 12:48:29.973 plugin-container[9839:87872] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:48:29.973 plugin-container[9839:87872] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:48:29.975 plugin-container[9839:87872] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:48:29.975 plugin-container[9839:87872] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:48:29.976 plugin-container[9839:87867] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:48:29.976 plugin-container[9839:87867] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+1665060645519	geckodriver	INFO	Listening on 127.0.0.1:62175
+1665060646530	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileElCfUM"
+*** You are running in headless mode.
+1665060646860	Marionette	INFO	Marionette enabled
+2022-10-06 13:50:46.863 plugin-container[10042:90120] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:50:46.864 plugin-container[10042:90120] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:50:46.873 plugin-container[10042:90120] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:50:46.873 plugin-container[10042:90120] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:50:46.873 plugin-container[10042:90122] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:50:46.873 plugin-container[10042:90122] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665060646897	Marionette	INFO	Listening on port 62182
+Read port: 62182
+1665060647016	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileElCfUM/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 12:51:02.510 plugin-container[10085:91136] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:51:02.510 plugin-container[10085:91136] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:51:02.513 plugin-container[10085:91136] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:51:02.513 plugin-container[10085:91136] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:51:02.513 plugin-container[10085:91140] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:51:02.513 plugin-container[10085:91140] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+1665060691938	geckodriver	INFO	Listening on 127.0.0.1:63167
+1665060692951	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileeNceHj"
+*** You are running in headless mode.
+1665060693297	Marionette	INFO	Marionette enabled
+2022-10-06 13:51:33.300 plugin-container[10166:92566] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:51:33.301 plugin-container[10166:92566] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665060693305	Marionette	INFO	Listening on port 63182
+2022-10-06 13:51:33.314 plugin-container[10166:92566] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:51:33.314 plugin-container[10166:92566] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:51:33.314 plugin-container[10166:92597] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:51:33.314 plugin-container[10166:92597] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 63182
+1665060693447	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofileeNceHj/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 12:51:48.038 plugin-container[10203:93296] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:51:48.040 plugin-container[10203:93296] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:51:48.042 plugin-container[10203:93296] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:51:48.042 plugin-container[10203:93296] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:51:48.043 plugin-container[10203:93309] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:51:48.043 plugin-container[10203:93309] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+1665060772714	geckodriver	INFO	Listening on 127.0.0.1:64428
+1665060773717	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofile7oPrOa"
+*** You are running in headless mode.
+1665060774056	Marionette	INFO	Marionette enabled
+2022-10-06 13:52:54.075 plugin-container[10330:95409] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:52:54.076 plugin-container[10330:95409] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665060774077	Marionette	INFO	Listening on port 64442
+2022-10-06 13:52:54.081 plugin-container[10330:95409] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:52:54.081 plugin-container[10330:95409] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:52:54.081 plugin-container[10330:95412] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:52:54.081 plugin-container[10330:95412] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 64442
+1665060774230	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofile7oPrOa/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 12:53:08.932 plugin-container[10363:96151] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:53:08.932 plugin-container[10363:96151] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:53:08.936 plugin-container[10363:96151] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:53:08.936 plugin-container[10363:96151] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:53:08.936 plugin-container[10363:96136] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:53:08.936 plugin-container[10363:96136] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665060817971	geckodriver	INFO	Listening on 127.0.0.1:64795
+1665060818994	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofilekZ19iC"
+*** You are running in headless mode.
+1665060819349	Marionette	INFO	Marionette enabled
+1665060819355	Marionette	INFO	Listening on port 64806
+2022-10-06 13:53:39.357 plugin-container[10411:96881] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:53:39.357 plugin-container[10411:96881] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:53:39.360 plugin-container[10411:96881] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:53:39.360 plugin-container[10411:96881] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:53:39.360 plugin-container[10411:96878] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:53:39.360 plugin-container[10411:96878] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 64806
+1665060819502	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofilekZ19iC/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 12:53:54.279 plugin-container[10449:97593] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:53:54.279 plugin-container[10449:97593] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:53:54.281 plugin-container[10449:97593] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:53:54.281 plugin-container[10449:97593] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:53:54.281 plugin-container[10449:97615] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:53:54.281 plugin-container[10449:97615] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+1665060996412	geckodriver	INFO	Listening on 127.0.0.1:65419
+1665060997427	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--no-sandbox" "--disable-dev-shm-usage" "-foreground" "-no-remote" "-profile" "/var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofiletX8woC"
+*** You are running in headless mode.
+2022-10-06 13:56:37.938 plugin-container[10717:100580] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:56:37.939 plugin-container[10717:100580] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1665060997953	Marionette	INFO	Marionette enabled
+1665060997975	Marionette	INFO	Listening on port 65426
+2022-10-06 13:56:38.024 plugin-container[10717:100580] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:56:38.024 plugin-container[10717:100580] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 13:56:38.024 plugin-container[10717:100582] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 13:56:38.024 plugin-container[10717:100582] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 65426
+1665060998160	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rj/nvyc7brx2p55bjzhqlxcrmpm0000gn/T/rust_mozprofiletX8woC/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+2022-10-06 12:56:53.205 plugin-container[10748:101332] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:56:53.205 plugin-container[10748:101332] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:56:53.215 plugin-container[10748:101332] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:56:53.215 plugin-container[10748:101332] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-10-06 12:56:53.218 plugin-container[10748:101336] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-10-06 12:56:53.218 plugin-container[10748:101336] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://gorillamind.com."
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.

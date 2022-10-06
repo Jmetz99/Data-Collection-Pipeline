@@ -13,3 +13,13 @@ Wrote unittests for the methods of the scraper concerned with gathering the link
 Uploaded raw data of product information in json format and image jpeg to amazon S3. Formatted product data contained in dictionary using pandas and, using sqlalchemy to create an engine linked with AWS database, added product data to the cloud.
 
 ## Milestone 7
+In this milestone I implemented some further tests for the public methods in my scraper. For example, I tested the 'click_object()' method actually interacts with the element it is given. I also used moto to mock amazon s3 services, allowing me to test whether my 'upload_to_s3()' method actually stored data in an s3 bucket. 
+
+In order to prevent rescraping data, I implemented a method which queries my aws RDS for all the existing product ID's and compares these with the set of links to scrape to find the symmetric difference, i.e. the links which haven't been scraped.
+
+## Milestone 8
+In this milestone I learnt to use docker to containerise my application and run it successfully on an ec2 instance. By generating a docker image, pushing this to dockerhub, pulling it onto the ec2 and running it there.
+
+## Milestone 9
+
+## Milestone 10

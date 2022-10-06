@@ -1,30 +1,16 @@
 import os
 import json
-import chromedriver_autoinstaller as chromedriver
 from selenium import webdriver
 import urllib.request
-import time
 import uuid
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import boto3
 import pandas as pd
 from sqlalchemy import create_engine
 import psycopg2
-
-DATABASE_TYPE = 'postgresql'
-DBAPI = 'psycopg2'
-HOST = 'gorilla.cjzhidft7nnj.eu-west-2.rds.amazonaws.com'
-USER = 'postgres'
-PASSWORD = os.environ.get('Password')
-DATABASE = 'postgres'
-PORT = 5432
-engine = create_engine(f"{DATABASE_TYPE}+{DBAPI}://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}")
-engine.connect()
-chromedriver.install()
-
 
 class Scraper:
     '''
@@ -45,9 +31,24 @@ class Scraper:
         url: str 
             The url of the website to be scraped.
         '''
-        options = webdriver.ChromeOptions()
-        options.add_argument('headless')
-        self.driver = webdriver.Chrome(chrome_options=options)
+        # initialise driver with chosen options
+        options = webdriver.FirefoxOptions()
+        options.add_argument('--headless')
+        options.add_argument('--no-sandbox') 
+        options.add_argument('--disable-dev-shm-usage')  
+        self.driver = webdriver.Firefox(options=options)
+        
+        # connect to database
+        HOST = os.getenv('DB_HOST')
+        USER = os.getenv('DB_USER')
+        PASSWORD = os.getenv('DB_PASSWORD')
+        DATABASE = os.getenv('DB_NAME')
+        DATABASE_TYPE = 'postgresql'
+        PORT = 5432
+        self.engine = create_engine(f"{DATABASE_TYPE}+{'psycopg2'}://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}")
+        self.engine.connect()
+        
+        # go to gorillamind products page
         self.driver.get(url)
         self.driver.maximize_window()
 
@@ -72,7 +73,6 @@ class Scraper:
         xpath: str
             The Xpath of the pop-up window.
         '''
-
         close_offer_button = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located((By.XPATH, xpath)))
         close_offer_button.click()
 
@@ -98,7 +98,12 @@ class Scraper:
             link = a_tag.get_attribute('href')
             link_list.append(link)
 
-        self.close_offer()
+        try:
+            self.close_offer()
+        except:
+            print("Offer didn't appear")
+
+        self.driver.find_element(by=By.XPATH, value="//html").send_keys("TAB")
         self.click_object('//*[@id="shopify-section-collection__main"]/div/div[2]/div/div/nav/a')
 
         prod_container2 = self.driver.find_element(by=By.XPATH, value = xpath)
@@ -126,7 +131,6 @@ class Scraper:
             return image_link
         except:
             pass
-
 
     def _product_id(self, link):
         '''
@@ -172,7 +176,7 @@ class Scraper:
         try:
             product_dict['Name'] = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[1]/section/div/div/div[2]/div[1]/h1').text
         except:
-            print('Name not found.')
+            print(f'{product_dict["ID"]}Name not found.')
         
         try:
             product_dict['Price'] = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[1]/section/div/div/div[2]/div[1]/p/span[2]/span/span').text
@@ -180,7 +184,7 @@ class Scraper:
             print(f'{product_dict["ID"]} price not found.')
 
         try:
-            descrip_txt = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[2]/div/div/div[1]/div/div[1]/div[1]/span[1]').text
+            descrip_txt = self.driver.find_element(by=By.XPATH, value='//*[@id="shopify-section-product__supplements"]/section[2]/div/div/div[1]/div/div[1]/div[1]').text
             description = descrip_txt.replace('\n', " ")
             product_dict['Description'] = description
         except: 
@@ -284,7 +288,7 @@ class Scraper:
         p = os.path.abspath(os.path.dirname(__file__))
         os.chdir(p)
     
-    def upload_to_cloud(self, bucket, path):
+    def upload_to_s3(self, bucket, path):
         '''
         This function is used to upload a given product's json file and jpeg to a specified amazon s3 bucket.
 
@@ -295,12 +299,12 @@ class Scraper:
         bucket: str
             The name of the s3 bucket.
         '''
+        cwd = os.path.dirname(os.path.realpath(__file__))
         s3_client = boto3.client('s3')
-        id = path.replace('/Users/jacobmetz/Documents/web_scraper/utils/raw_data/', '')
-        
+        id = path.replace(f'{cwd}/raw_data/', '')
         s3_client.upload_file(f'{path}/data.json', bucket, f'{id}.json')
         try:
-            s3_client.upload_file(f'{path}/{id}.jpeg', bucket, f'{id}.jpeg')
+            s3_client.upload_file(f'{path}/{id}.png', bucket, f'{id}.jpeg')
         except:
             pass
     
@@ -313,6 +317,8 @@ class Scraper:
         links_to_scrape: list
             The list of unscraped links.
         '''
+        db_ids = pd.read_sql_query('''SELECT "ID" FROM "gorilla"''', self.engine)
+
         links = self.get_links()
         ids = set()
         for link in links:
@@ -321,7 +327,6 @@ class Scraper:
             uids.append(id)
             ids.update(uids)
         
-        db_ids = pd.read_sql_query('''SELECT "ID" FROM "gorilla"''', engine)
         old_ids = set(db_ids["ID"])
         sym_diff = list(ids.symmetric_difference(old_ids))
         
@@ -337,10 +342,17 @@ class Scraper:
     def scrape_all_data(self):
         '''
         This function is used scrape all new product data from the gorilla mind website and return a dataframe of the scraped data.
+
+        Returns:
+        --------
+        df: dataframe
+            The dataframe of scraped data
         '''
         links = self._get_unscraped_links()
+        
         data_dicts = []
-
+        bucket = 'aicore-scraper-data'
+        
         for link in links:
             data = self.get_product_data(link)
             data_dicts.append(data)
@@ -348,8 +360,8 @@ class Scraper:
             self.make_directory(path)
             self.save_data(data, path)
             self.download_image(data['Image Link'], data['ID'], path)
-            self.upload_to_cloud(path)
+            self.upload_to_s3(bucket, path)
             self._return_home()
-
+        
         df = pd.DataFrame(data_dicts)
         return df

@@ -1,20 +1,20 @@
 from utils.scraper import Scraper
-from sqlalchemy import create_engine
-import pandas as pd
 import os
+from sqlalchemy import create_engine
 import psycopg2
-import numpy as np
+import pandas as pd
+
+HOST = os.getenv('DB_HOST')
+USER = os.getenv('DB_USER')
+PASSWORD = os.getenv('DB_PASSWORD')
+DATABASE = os.getenv('DB_NAME')
 DATABASE_TYPE = 'postgresql'
-DBAPI = 'psycopg2'
-HOST = 'gorilla.cjzhidft7nnj.eu-west-2.rds.amazonaws.com'
-USER = 'postgres'
-PASSWORD = os.environ.get('Password')
-DATABASE = 'postgres'
 PORT = 5432
-engine = create_engine(f"{DATABASE_TYPE}+{DBAPI}://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}")
+engine = create_engine(f"{DATABASE_TYPE}+{'psycopg2'}://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}")
 engine.connect()
 
 if __name__ == '__main__':
     scraper = Scraper()
     new_data = scraper.scrape_all_data()
-    new_data.to_sql(name='gorilla', con=engine, if_exists = 'replace', index=False)
+    new_data.to_sql(name='gorilla', con=engine, if_exists = 'append', index=False)
+    
