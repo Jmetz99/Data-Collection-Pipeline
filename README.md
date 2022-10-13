@@ -24,3 +24,4 @@ In this milestone I learnt to use docker to containerise my application and run 
 In this milestone I ran prometheus, an open-source software for monitoring and alerting, on my EC2 instance to track metrics from prometheus itself, the operating system and docker. With the data outputted from prometheus I created a grafana dashboard to present these metrics in a accessible format.
 
 ## Milestone 10
+In this milestone I learnt how to implememt continuous integration by using Github actions to automate the building of a docker image after any new pushes to my scraper's repository and then push this image to dockerhub. I then used cron on my ec2 instance to automatically stop my scraper, pull the latest image from dockerhub and then run this once a day.
