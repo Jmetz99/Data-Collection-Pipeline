@@ -21,5 +21,6 @@ In order to prevent rescraping data, I implemented a method which queries my aws
 In this milestone I learnt to use docker to containerise my application and run it successfully on an ec2 instance. By generating a docker image, pushing this to dockerhub, pulling it onto the ec2 and running it there.
 
 ## Milestone 9
+In this milestone I ran prometheus, an open-source software for monitoring and alerting, on my EC2 instance to track metrics from prometheus itself, the operating system and docker. With the data outputted from prometheus I created a grafana dashboard to present these metrics in a accessible format.
 
 ## Milestone 10
